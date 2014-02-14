@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Use Facebook Page Albums as Image Source in Django - Gotchacode</title>
+  <meta name="author" content="Vinit Kumar">
+
+  
+  <meta name="description" content="Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. Infact the whole ecosystem is fueled by images. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Gotchacode" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Gotchacode</a></h1>
+  
+    <h2 class="header-subtitle">A Guide To Your Digital Life.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:gotchacode.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Use Facebook Page Albums as Image Source in Django</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-14T20:39:36+05:30" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. Infact the whole ecosystem is fueled by images. In order to scale for the vast user base of basebook, they have done a really good job.</p>
+
+<p>So what if you don&rsquo;t want to use your own storage for uploading images and want to use Facebook for Images? It would be so cool, right?
+There are two benefits:</p>
+
+<ul>
+<li>You don&rsquo;t have to spend anytime setting up an app or service to deal with images. Believe me it is a real tough problem to solve given the size and count of images. You can&rsquo;t put a bar on either of these two.</li>
+<li>It gives your users a much user friendly way. They upload images just once on facebook and it automagically appears on your website. Facebook almost never gets down so there is very good chance you will get a 99.9% uptime.</li>
+</ul>
+
+
+<p>So, In order to fix this problem last year I created a Ajax based plugins to fetch images from facebook album. It asked user to enter album URL and name. But there was an issue with this approach. In order to get access to facebook graph database it has to get access tokens and each access token only last two months. Plus, it collapsed when it faced IE, since there is unsolvable CORS issue with IE &lt; 9 (our 50% client base for that project).</p>
+
+<p>It was a tough problem to solve. But i finally found some good articles and projects on internet. One such project was django-fbgallery. It used a really neat approach to get the facebook images server side and renders it the page purely server side. It not only solved the IE issue, but also the quality and speed of image loading became instant.</p>
+
+<p>But there was an issue with this app, it used URLS to render the albums and spoiled the pretty URLS that you would like for pages in Django. So I took the core part of the app ( the facebook interaction part) and made a sweet CMS plugin out of it.</p>
+
+<p>Here is the code to make it all work:</p>
+
+<figure class='code'><figcaption><span>facebook.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span> <span class="nn">urllib</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">django.utils.simplejson</span> <span class="kn">as</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">defaultfilters</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">fql_url</span> <span class="o">=</span> <span class="s">&#39;https://api.facebook.com/method/fql.query&#39;</span>
+</span><span class='line'><span class="n">cache_expires</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="s">&#39;CACHE_EXPIRES&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">cachename</span> <span class="o">=</span> <span class="s">&#39;fbgallery_cache_&#39;</span> <span class="o">+</span> <span class="n">defaultfilters</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">cache_expires</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">data</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cachename</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;query&#39;</span><span class="p">:</span><span class="n">fql</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;format&#39;</span><span class="p">:</span><span class="s">&#39;json&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">f</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">fql_url</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">options</span><span class="p">)))</span>
+</span><span class='line'>        <span class="n">response</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">cache_expires</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cachename</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cache_expires</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">data</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">display_album</span><span class="p">(</span><span class="n">album_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Display a facebook album</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    First check that the album id belongs to the page id specified</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">fb_id</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">FB_PAGE_ID</span>
+</span><span class='line'>    <span class="n">fql</span> <span class="o">=</span> <span class="s">&quot;select aid, name from album where owner=</span><span class="si">%s</span><span class="s"> and aid=&#39;</span><span class="si">%s</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fb_id</span><span class="p">,</span> <span class="n">album_id</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">valid_album</span> <span class="o">=</span> <span class="n">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">valid_album</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">fql</span> <span class="o">=</span> <span class="s">&quot;select pid, src, src_small, src_big, caption from photo where aid = &#39;</span><span class="si">%s</span><span class="s">&#39;  order by created desc&quot;</span> <span class="o">%</span> <span class="n">album_id</span>
+</span><span class='line'>        <span class="n">album</span> <span class="o">=</span> <span class="n">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>        <span class="c">#album_detail = [item for item in valid_album]       </span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">album</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I asked user to enter the album ID and name, then rendered the album using the plugin here:</p>
+
+<figure class='code'><figcaption><span>cms_plugins.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_base</span> <span class="kn">import</span> <span class="n">CMSPluginBase</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_pool</span> <span class="kn">import</span> <span class="n">plugin_pool</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">ugettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">facebook</span> <span class="kn">import</span> <span class="n">display_album</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">from</span> <span class="nn">models</span> <span class="kn">import</span> <span class="n">FacebookGallery</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">FacebookGalleryPlugin</span><span class="p">(</span><span class="n">CMSPluginBase</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="n">FacebookGallery</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s">&quot;Facebook Album Gallery&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">render_template</span> <span class="o">=</span> <span class="s">&quot;cmsplugin_fbgallery/album.html&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">placeholder</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">album</span> <span class="o">=</span> <span class="n">display_album</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">album_id</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">context</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+</span><span class='line'>          <span class="s">&#39;object&#39;</span><span class="p">:</span> <span class="n">instance</span><span class="p">,</span>
+</span><span class='line'>          <span class="s">&#39;album&#39;</span><span class="p">:</span> <span class="n">album</span><span class="p">,</span>
+</span><span class='line'>          <span class="p">})</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">context</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">plugin_pool</span><span class="o">.</span><span class="n">register_plugin</span><span class="p">(</span><span class="n">FacebookGalleryPlugin</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You could choose whatever template you want. It&rsquo;s entirely upto you.</p>
+
+<p>Here is the image of this plugin live in action:</p>
+
+<p><a href="http://imgur.com/dmrxcXh"><img src="http://i.imgur.com/dmrxcXh.png" title="Hosted by imgur.com" /></a></p>
+
+<p>The plugin is open source here: <a href="https://github.com/changer/cmsplugin-fbgallery">cmsplugin-fbgallery</a> . Feel free to contribute and ask questions.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Vinit Kumar</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-14T20:39:36+05:30" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/" data-via="vinitkme" data-counturl="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/13/migrating-to-octopress/" title="Previous Post: Migrating To Octopress">&laquo; Migrating To Octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/">How to Use Facebook Page Albums as Image Source in Django</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/13/migrating-to-octopress/">Migrating to Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/01/music-movies-and-life.html">Music, Movies and Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/01/happy-new-year-2014.html">Happy New Year 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/using-html5-localstorage-into-your-app.html">Using HTML5 localStorage Into Your App, Check ldb.js</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/vinitkumar">@vinitkumar</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'vinitkumar',
+            count: ,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Vinit Kumar -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

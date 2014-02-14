@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.github.io/atom.xml" rel="self"/>
   <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T17:28:36+05:30</updated>
+  <updated>2014-02-14T21:09:58+05:30</updated>
   <id>http://gotchacode.github.io/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -12,6 +12,172 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use Facebook Page Albums as Image Source in Django]]></title>
+    <link href="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/"/>
+    <updated>2014-02-14T20:39:36+05:30</updated>
+    <id>http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django</id>
+    <content type="html"><![CDATA[<p>Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. Infact the whole ecosystem is fueled by images. In order to scale for the vast user base of basebook, they have done a really good job.</p>
+
+<p>So what if you don&rsquo;t want to use your own storage for uploading images and want to use Facebook for Images? It would be so cool, right?
+There are two benefits:</p>
+
+<ul>
+<li>You don&rsquo;t have to spend anytime setting up an app or service to deal with images. Believe me it is a real tough problem to solve given the size and count of images. You can&rsquo;t put a bar on either of these two.</li>
+<li>It gives your users a much user friendly way. They upload images just once on facebook and it automagically appears on your website. Facebook almost never gets down so there is very good chance you will get a 99.9% uptime.</li>
+</ul>
+
+
+<p>So, In order to fix this problem last year I created a Ajax based plugins to fetch images from facebook album. It asked user to enter album URL and name. But there was an issue with this approach. In order to get access to facebook graph database it has to get access tokens and each access token only last two months. Plus, it collapsed when it faced IE, since there is unsolvable CORS issue with IE &lt; 9 (our 50% client base for that project).</p>
+
+<p>It was a tough problem to solve. But i finally found some good articles and projects on internet. One such project was django-fbgallery. It used a really neat approach to get the facebook images server side and renders it the page purely server side. It not only solved the IE issue, but also the quality and speed of image loading became instant.</p>
+
+<p>But there was an issue with this app, it used URLS to render the albums and spoiled the pretty URLS that you would like for pages in Django. So I took the core part of the app ( the facebook interaction part) and made a sweet CMS plugin out of it.</p>
+
+<p>Here is the code to make it all work:</p>
+
+<figure class='code'><figcaption><span>facebook.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span> <span class="nn">urllib</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">django.utils.simplejson</span> <span class="kn">as</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">defaultfilters</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">fql_url</span> <span class="o">=</span> <span class="s">&#39;https://api.facebook.com/method/fql.query&#39;</span>
+</span><span class='line'><span class="n">cache_expires</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="s">&#39;CACHE_EXPIRES&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">cachename</span> <span class="o">=</span> <span class="s">&#39;fbgallery_cache_&#39;</span> <span class="o">+</span> <span class="n">defaultfilters</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">cache_expires</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">data</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cachename</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;query&#39;</span><span class="p">:</span><span class="n">fql</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;format&#39;</span><span class="p">:</span><span class="s">&#39;json&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">f</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">fql_url</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">options</span><span class="p">)))</span>
+</span><span class='line'>        <span class="n">response</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">cache_expires</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cachename</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cache_expires</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">data</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">display_album</span><span class="p">(</span><span class="n">album_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Display a facebook album</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    First check that the album id belongs to the page id specified</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">fb_id</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">FB_PAGE_ID</span>
+</span><span class='line'>    <span class="n">fql</span> <span class="o">=</span> <span class="s">&quot;select aid, name from album where owner=</span><span class="si">%s</span><span class="s"> and aid=&#39;</span><span class="si">%s</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fb_id</span><span class="p">,</span> <span class="n">album_id</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">valid_album</span> <span class="o">=</span> <span class="n">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">valid_album</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">fql</span> <span class="o">=</span> <span class="s">&quot;select pid, src, src_small, src_big, caption from photo where aid = &#39;</span><span class="si">%s</span><span class="s">&#39;  order by created desc&quot;</span> <span class="o">%</span> <span class="n">album_id</span>
+</span><span class='line'>        <span class="n">album</span> <span class="o">=</span> <span class="n">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">)</span>
+</span><span class='line'>        <span class="c">#album_detail = [item for item in valid_album]       </span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">album</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I asked user to enter the album ID and name, then rendered the album using the plugin here:</p>
+
+<figure class='code'><figcaption><span>cms_plugins.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_base</span> <span class="kn">import</span> <span class="n">CMSPluginBase</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_pool</span> <span class="kn">import</span> <span class="n">plugin_pool</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">ugettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">facebook</span> <span class="kn">import</span> <span class="n">display_album</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">from</span> <span class="nn">models</span> <span class="kn">import</span> <span class="n">FacebookGallery</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">FacebookGalleryPlugin</span><span class="p">(</span><span class="n">CMSPluginBase</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="n">FacebookGallery</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s">&quot;Facebook Album Gallery&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">render_template</span> <span class="o">=</span> <span class="s">&quot;cmsplugin_fbgallery/album.html&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">placeholder</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">album</span> <span class="o">=</span> <span class="n">display_album</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">album_id</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">context</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+</span><span class='line'>          <span class="s">&#39;object&#39;</span><span class="p">:</span> <span class="n">instance</span><span class="p">,</span>
+</span><span class='line'>          <span class="s">&#39;album&#39;</span><span class="p">:</span> <span class="n">album</span><span class="p">,</span>
+</span><span class='line'>          <span class="p">})</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">context</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">plugin_pool</span><span class="o">.</span><span class="n">register_plugin</span><span class="p">(</span><span class="n">FacebookGalleryPlugin</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You could choose whatever template you want. It&rsquo;s entirely upto you.</p>
+
+<p>Here is the image of this plugin live in action:</p>
+
+<p><a href="http://imgur.com/dmrxcXh"><img src="http://i.imgur.com/dmrxcXh.png" title="Hosted by imgur.com" /></a></p>
+
+<p>The plugin is open source here: <a href="https://github.com/changer/cmsplugin-fbgallery">cmsplugin-fbgallery</a> . Feel free to contribute and ask questions.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Migrating to Octopress]]></title>
@@ -370,16 +536,6 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
     <id>http://gotchacode.github.io/2012/12/how-to-setup-ideal-front-end</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Starting with Front-End Development and looking for a robust setup?<br /><br />Install Ubuntu 12.04 and&nbsp;here are some of the tools and tips that could come handy if you are configuring it for the first time. I am not detailing on how to install these tools but rather would suggest on what could be good setup for&nbsp;development..<br /><b><br /></b><b>IDE</b>: This is where you spend most of the time. So choose wisely among Sublime Text2, Vim or Emacs. Vim and Emacs are entirely customizable and comes with loads of plugin that would really improve your&nbsp;efficiency. Sublime text is an awesome code editor and you must try it first as it is highly effective and has a lower learning curve. Also there are loads of good plugins available that makes it a handy tool.<br /><div style="text-align: left;"><br /><b>Servers</b>: Install&nbsp;Apache 2,&nbsp;nginx and Node. This would cover most of the modern web server stack. Though node is technically not a server. But I hope you get my point.</div><div style="text-align: left;">Once Node and npm are installed there are some indispensable packages you must use. <b><i>UglifyJS </i></b>among others is a pretty handy one.&nbsp;Install<b><i> Compass </i></b>and <b><i>CoffeeScript</i></b>, also setup up <b><i>jslint/jshint</i></b> with your IDE. It will ensure a habit of shipping out quality code.<br /><br /><b>Browser<i>: Use the latest and nightly builds of Chromium/&nbsp;Firefox</i></b>, you should work with latest once so not miss any good feature/ improvements.</div><ul style="text-align: left;"><li>Install the <i style="font-weight: bold;">latest production release of Ruby, Python and Java, PHP </i>or whatever is your choice of language.&nbsp;</li><li>Learn<b><i> Version control </i></b>such as <b>git</b> and invest some time to learn it. It would save you tonnes of time later.</li><li>Last but not the least use<a href="http://www.blogger.com/%C2%A0http://yeoman.io/" target="_blank">&nbsp;yeoman</a>&nbsp;. It is really gem of a tool, it , it gives a robust set of tools , libraries and a workflow that most of top developers use. Invest sometime in learning and using it and you will be always glad that you did.&nbsp;</li></ul><br /><div style="text-align: left;"><br /></div><div style="text-align: left;">Installing each one them on Ubuntu 12.04 is easy and obviously it is free and freakishly stable. Configure once and worry about the important aspects of&nbsp;development.</div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div></div>
-</div>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Are Some Good JavaScript Libraries to Learn?]]></title>
-    <link href="http://gotchacode.github.io/2012/12/what-are-some-good-javascript-libraries.html"/>
-    <updated>2012-12-20T19:18:00+05:30</updated>
-    <id>http://gotchacode.github.io/2012/12/what-are-some-good-javascript-libraries</id>
-    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on">I asked this question on <a href="http://www.quora.com/JavaScript/What-are-some-awesome-JS-libraries-any-developer-should-be-aware-of?__snids__=67108875&amp;__nsrc__=1" target="_blank">Quora</a> and got some interesting answers. Here i will be writing it in form of a blog post.<br /><br />There are tons of JS Libraries, since JavaScript is one of hottest&nbsp;languages and a lot of developers work on it to develop rich client side as well as server side (NodeJS based) . So if your looking forward to use a MVC framework <a href="http://addyosmani.github.com/todomvc/" target="_blank">TodoMVC</a>&nbsp;is a great place to start with. Next for more&nbsp;specialized&nbsp;ones, you can check <a href="http://jster.net/">http://jster.net</a> or&nbsp;<a href="http://devrates.com/project/list?query=%5Bjavascript%5D" target="_blank">devrates.com</a>.<br />Here are some good&nbsp;frameworks one should be familiar with such as AngularJS,&nbsp;BackBone JS, Mocha,&nbsp;Prototype JS.<br /><br />Well, the key is get familiar with JavaScript, and learn/use these libraries that interests you most. Also going through the source code of these libraries is a very enlightening experience.<br /><br />With that said, May the force be with you!<br /><br /><br /><br /></div>
 </div>]]></content>
   </entry>
   
