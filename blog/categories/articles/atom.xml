@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Articles | Gotchacode]]></title>
-  <link href="http://gotchacode.github.io/blog/categories/articles/atom.xml" rel="self"/>
-  <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T21:48:13+05:30</updated>
-  <id>http://gotchacode.github.io/</id>
+  <link href="http://gotchacode.com/blog/categories/articles/atom.xml" rel="self"/>
+  <link href="http://gotchacode.com/"/>
+  <updated>2014-02-14T22:07:10+05:30</updated>
+  <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
     <email><![CDATA[vinitcool76@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Demo Post]]></title>
-    <link href="http://gotchacode.github.io/blog/2013/07/02/demo-post/"/>
+    <link href="http://gotchacode.com/blog/2013/07/02/demo-post/"/>
     <updated>2013-07-02T00:00:00+05:30</updated>
-    <id>http://gotchacode.github.io/blog/2013/07/02/demo-post</id>
+    <id>http://gotchacode.com/blog/2013/07/02/demo-post</id>
     <content type="html"><![CDATA[<p>This is a demo post for showing the jekyll theme. Jekyll lets you write
 your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
 

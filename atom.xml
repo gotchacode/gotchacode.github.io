@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Gotchacode]]></title>
-  <link href="http://gotchacode.github.io/atom.xml" rel="self"/>
-  <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T21:48:13+05:30</updated>
-  <id>http://gotchacode.github.io/</id>
+  <link href="http://gotchacode.com/atom.xml" rel="self"/>
+  <link href="http://gotchacode.com/"/>
+  <updated>2014-02-14T22:07:10+05:30</updated>
+  <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
     <email><![CDATA[vinitcool76@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Use Facebook Page Albums as Image Source in Django]]></title>
-    <link href="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/"/>
+    <link href="http://gotchacode.com/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/"/>
     <updated>2014-02-14T20:39:36+05:30</updated>
-    <id>http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django</id>
+    <id>http://gotchacode.com/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django</id>
     <content type="html"><![CDATA[<p>Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. In fact the whole ecosystem is fueled by images. In order to scale for the vast user base of Facebook, they have done a really good job.</p>
 
 <p>So what if you don&rsquo;t want to use your own storage for uploading images and want to use Facebook for Images? It would be so cool, right?
@@ -181,9 +181,9 @@ There are two benefits:</p>
   
   <entry>
     <title type="html"><![CDATA[Migrating to Octopress]]></title>
-    <link href="http://gotchacode.github.io/blog/2014/02/13/migrating-to-octopress/"/>
+    <link href="http://gotchacode.com/blog/2014/02/13/migrating-to-octopress/"/>
     <updated>2014-02-13T23:07:02+05:30</updated>
-    <id>http://gotchacode.github.io/blog/2014/02/13/migrating-to-octopress</id>
+    <id>http://gotchacode.com/blog/2014/02/13/migrating-to-octopress</id>
     <content type="html"><![CDATA[<p>Finally after much ado, I am moving Gotchacode to Octopress. There are various reasons for doing it.
 I am listing some of them here:</p>
 
@@ -201,9 +201,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Music, Movies and Life]]></title>
-    <link href="http://gotchacode.github.io/2014/01/music-movies-and-life.html"/>
+    <link href="http://gotchacode.com/2014/01/music-movies-and-life.html"/>
     <updated>2014-01-12T08:29:00+05:30</updated>
-    <id>http://gotchacode.github.io/2014/01/music-movies-and-life</id>
+    <id>http://gotchacode.com/2014/01/music-movies-and-life</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">I love watching Movies and I love Music. They are almost inseperable part of life. I love the way they could touch and move your life more than you could imagine. I remember watching &#8220;The Social Network&#8221; almost 50 times in college. It served as a push to write more code and do awesome in life.<div><br /></div><div>Well, it might sound really strange but for last 10 years or so. I just let life flow in the natural way. I failed quite sometimes, achieved success as well. Made some long lasting friends, lost some people I felt who were my friends.</div><div><br /></div><div>The great thing is that in all these experiences, I realised that what is the true purpose of my life. They say, there are just two important days in your life.</div><div><br /></div><blockquote class="tr_bq">The day when you are born, and the day you find out why?</blockquote>I think I just found out the purpose of my life. It&#8217;s not something I would want to disclose and claim I am going to achieve. It is the way my thinking changed and the choice of life I am going to make.<br /><br />Also, I would love to thank the wonderful readers of this blog - which initially started casually just to empty my mind on topics I felt were relevant at that time. For sure there are some not so good posts as well. But again, this blog is just me writing what comes in my mind. And if some of those helps someone or guide someone. Why not?<br /><br /></div>
 </div>]]></content>
@@ -211,9 +211,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Happy New Year 2014]]></title>
-    <link href="http://gotchacode.github.io/2014/01/happy-new-year-2014.html"/>
+    <link href="http://gotchacode.com/2014/01/happy-new-year-2014.html"/>
     <updated>2014-01-01T13:22:00+05:30</updated>
-    <id>http://gotchacode.github.io/2014/01/happy-new-year-2014</id>
+    <id>http://gotchacode.com/2014/01/happy-new-year-2014</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">A very happy new year to all the readers of this blog. To start with, I would try to publish a post at least once a week so that it may satisfy your appetite on a regular basis. Also, I am meditating about something new on this blog. It will be revealed when the time comes. With that said, have an amazing start to the year.</div>
 </div>]]></content>
@@ -221,9 +221,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Using HTML5 localStorage Into Your App, Check ldb.js]]></title>
-    <link href="http://gotchacode.github.io/2013/12/using-html5-localstorage-into-your-app.html"/>
+    <link href="http://gotchacode.com/2013/12/using-html5-localstorage-into-your-app.html"/>
     <updated>2013-12-22T05:20:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/12/using-html5-localstorage-into-your-app</id>
+    <id>http://gotchacode.com/2013/12/using-html5-localstorage-into-your-app</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Last night, I was hacking on a small utility library for use when using HTML5 localStorage. When you work with localStorage, it often gets into repetitive state when use use same command again and again. This library just abstracts the process and makes things easier for you. It would work on all modern browsers.<br /><br /><pre><code class="javascript">/**<br /> * Ldb.js<br /> * Copyright(c)2013  Vinit Kumar <vinit .kumar="" changer.nl=""><br /> * MIT Licensed<br /> */<br /><br />var Ldb = function () {};<br /><br />/**<br /> * [check Checks for localStorage support on the browsers]<br /> * @return {[String]} [status of localStorage Support]<br /> */<br />Ldb.prototype.check = function () {<br />  if (!localStorage) {<br />    return 'Please use a Modern browser, your browser does not support localStorage yet';<br />  } else {<br />    return 'Bingo, your Browsers supports localStorage, phew!';<br />  }<br />};<br /><br />/**<br /> * [get Gives the data stored in the key]<br /> * @param  {[String]} key [Key to retrive the data stored in localStorage]<br /> * @return {[JSON]}     [The JSON data stored | Error message saying no data stored with that key]<br /> */<br />Ldb.prototype.get = function (key) {<br />  if (localStorage.getItem(key)) {<br />    return JSON.parse(localStorage.getItem(key));<br />  } else {<br />    return 'No such key exists, Are you sure you have saved data with the key?';<br />  }<br />};<br /><br />/**<br /> * [set Saved data in the localStorage database]<br /> * @param {[String]} key   []<br /> * @param {[JSON]} value [The JSON data that gets stored in the localStorage]<br /> */<br />Ldb.prototype.set = function(key, value) {<br />  if (typeof (value) === 'object') {<br />    var stringValue = JSON.stringify(value);<br />    localStorage.setItem(key, stringValue);<br />    return 'Successfully saved your data to the key' + key +' key!';<br />  }<br />};<br /><br />/**<br /> * [remove description]<br /> * @param  {[String]} key [Key for the data to be deleted]<br /> * @return {[String]}     [Status message for the remove operation]<br /> */<br />Ldb.prototype.remove = function(key) {<br />  if (localStorage.getItem(key)) {<br />    localStorage.removeItem(key);<br />    return 'Successfully removed data with the key'+ key +' !';<br />  } else {<br />    return 'No such key exists, nothing to remove';<br />  }<br />};<br /></vinit><br /></code><br /></pre><br />This is all code for the utility as of now. More features are going to flow in coming weeks. Also, you can just install it using &#8216;npm install ldb&#8217; or &#8216;bower install ldb.js&#8217;. The code is Open Sourced here.&nbsp;https://github.com/vinitkumar/ldb.js</div>
 </div>]]></content>
@@ -231,9 +231,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[How to Focus and Learn One Thing Perfectly?]]></title>
-    <link href="http://gotchacode.github.io/2013/12/how-to-focus-and-learn-one-thing.html"/>
+    <link href="http://gotchacode.com/2013/12/how-to-focus-and-learn-one-thing.html"/>
     <updated>2013-12-04T17:39:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/12/how-to-focus-and-learn-one-thing</id>
+    <id>http://gotchacode.com/2013/12/how-to-focus-and-learn-one-thing</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">In Software development, there are so many things to learn. Especially, if you are web developer there are so many things to learn. Should you learn Rails, Django or .NET? Or should you learn Angular, Backbone or Ember?<br /><br />It is a very tricky question and has been puzzling me for quite sometime. But some time back, it kind of dawned on me that I should just try and own one technology at one time. Say if it&#8217;s Django try and learn everything about Django. Become the best in your company at Django. The benefits are two fold:<br />- You will have a stable career and you will be happy with the quality of your work.<br />- You can use that understanding of that technology with understanding and learning other technologies really fast.<br /><br />Another problem that I sometime face is lack of motivation to learn if something gets really tough. I learned that instead of setting a super tough goal, I should rather split it up and own it one by one. First of all, it gives me a sense of achievement and confidence. Also, my whole effort would be on completing that goal with best of my abilities.<br /><br />The things I said above is not rocket science, but if you are at my stage of learning. It might be useful to you.<br /><br /><br />With that said, May the Force be with you!<br /><br /><pre><span style="color: lime;">                ____                  <br />                _.' :  `._               <br />            .-.'`.  ;   .'`.-.           <br />   __      / : ___\ ;  /___ ; \      __  <br /> ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,<br /> :' `.t""--.. '&lt;@.`;_  ',@&gt;` ..--""j.' `;<br />      `:-.._J '-.-'L__ `-- ' L_..-;'     <br />        "-.__ ;  .-"  "-.  : __.-"       <br />            L ' /.------.\ ' J           <br />             "-.   "--"   .-"            <br />            __.l"-:_JL_;-";.__           <br />         .-j/'.;  ;""""  / .'\"-.        <br />       .' /:`. "-.:     .-" .';  `.      <br />    .-"  / ;  "-. "-..-" .-"  :    "-.   <br /> .+"-.  : :      "-.__.-"      ;-._   \  <br /> ; \  `.; ;                    : : "+. ; <br /> :  ;   ; ;                    : ;  : \: <br /> ;  :   ; :                    ;:   ;  : <br />: \  ;  :  ;                  : ;  /  :: <br />;  ; :   ; :                  ;   :   ;: <br />:  :  ;  :  ;                : :  ;  : ; <br />;\    :   ; :                ; ;     ; ; <br />: `."-;   :  ;              :  ;    /  ; <br /> ;    -:   ; :              ;  : .-"   : <br /> :\     \  :  ;            : \.-"      : <br />  ;`.    \  ; :            ;.'_..--  / ; <br />  :  "-.  "-:  ;          :/."      .'  :<br />   \         \ :          ;/  __        :<br />    \       .-`.\        /t-""  ":-+.   :<br />     `.  .-"    `l    __/ /`. :  ; ; \  ;<br />       \   .-" .-"-.-"  .' .'j \  /   ;/ <br />        \ / .-"   /.     .'.' ;_:'    ;  <br />         :-""-.`./-.'     /    `.___.'   <br />               \ `t  ._  /  bug          <br />                "-.t-._:'                <br /></span></pre><div><span style="color: lime;"><br /></span></div><br /><br /><br /><br /></div>
 </div>]]></content>
@@ -241,9 +241,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[What Is Information Overload and What to Do About It?]]></title>
-    <link href="http://gotchacode.github.io/2013/11/what-is-information-overload-and-what.html"/>
+    <link href="http://gotchacode.com/2013/11/what-is-information-overload-and-what.html"/>
     <updated>2013-11-30T18:13:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/11/what-is-information-overload-and-what</id>
+    <id>http://gotchacode.com/2013/11/what-is-information-overload-and-what</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Each one of us uses one Social Network or another. It was fine in the earlier days when it was connecting you to your long lost friend, colleague or someone you knew. But do we realize what it is doing to us now?<br /><div><br /></div><div>We are being subjected to information overload and that too in the worst form. There are endless stories about all the stuff that doesn&#8217;t even matter to us. We are being fed so much about our friends that we are not even interested to know about them anymore. Sharing every crap that happens in your life is a common norm and anyone who doesn&#8217;t stick to it is dated.&nbsp;</div><div><br /></div><div>Well, that fact is, we should just shut this information overload and take control of our life. We don&#8217;t really need to be subjected to this and become depressed and deprived people. Life has better meaning than all of it. We are born to do great things in life and not being sucked into this emotional and depressing wormhole that these Social Networks are creating.</div><div><br /></div><div>With that said, not all of the Social Networks are bad. Some of them like Twitter and Google+ gives us the option to minimise the intrusion of this excess information. So take a stand and control what kind of information gets to you. Clean up your friends and following list. Follow only those person and group you are really passionate &nbsp;about. Pick up some nice offline activity, meet some nice people , play some music, watch sunrise or sunset, start running etc. There are so many nice things to do. So just shut up laptop/tablets/smartphones and get some life people!</div></div>
 </div>]]></content>
@@ -251,9 +251,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Happiness Driven Development]]></title>
-    <link href="http://gotchacode.github.io/2013/11/happiness-driven-development.html"/>
+    <link href="http://gotchacode.com/2013/11/happiness-driven-development.html"/>
     <updated>2013-11-22T17:20:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/11/happiness-driven-development</id>
+    <id>http://gotchacode.com/2013/11/happiness-driven-development</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Software development could be a very tiring and demanding process. Putting 80 hour weeks running after a goal that may or maybe not be achieved and then getting into depression is not right.<br /><br />One should optimise his work and workplace for happiness. Setup small easy goals that you could really achieve and celebrate it every time. It is good to be ambitious but it is insanely stupid to make super tough goal with out some real practise.<br /><br />Start small, &nbsp;reach your goal and next time try to do it more efficiently. People say that &#8216;Failures are the pillars of success&#8217; , I would humbly disagree. It is these small successes that are pillars of some big successes. Look around yourself. Just take chess for example: Someone doesn&#8217;t becomes a grandmaster because he had been defeated by every other grandmaster. Likewise don&#8217;t obsess with failure. Better start winning by doing something nice today however small it maybe.<br /><br />Failure is a good thing to do some self evaluation and getting better where it&#8217;s needed. &nbsp;Treat it as a unit test, so that you know what tests are failing and what you could do to solve them. Solve them and come out with flying colors.<br /><br />Life is way too small to waste and be sad and depressed.<br />Think about it! :)<br /><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://b.vimeocdn.com/ts/447/176/447176815_640.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="http://b.vimeocdn.com/ts/447/176/447176815_640.jpg" width="400" /></a></div><div><br /></div></div>
 </div>]]></content>
@@ -261,9 +261,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Seven Tips to Get Better at Writing Code]]></title>
-    <link href="http://gotchacode.github.io/2013/07/seven-tips-to-get-better-at-writing-code.html"/>
+    <link href="http://gotchacode.com/2013/07/seven-tips-to-get-better-at-writing-code.html"/>
     <updated>2013-07-20T14:37:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/07/seven-tips-to-get-better-at-writing-code</id>
+    <id>http://gotchacode.com/2013/07/seven-tips-to-get-better-at-writing-code</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Every developer dreams of getting better at writing code. He/She wants his code to be clean and pragmatic. But this doesn&#8217;t happen on its own. Here are some tips to get better at writing code.<br /><br /><ol style="text-align: left;"><li>Follow TDD: Test driven development is a great way to improve your code. It ensures that whatever functionality you have implemented is doing what it is supposed to do. One should make sure to spend some time writing tests before writing a feature. It is a difficult practise to inculcate in your developers, but believe me the amount of time and stress you will save with it &nbsp;is phenomenal. &nbsp;There are basically two types of tests that should be present with your code: &nbsp;unit tests and integrations tests. Both are very important. Sometimes, it might not be possible to get everything unit tested but make sure key parts have units tests and integrations tests are complete.&nbsp;</li><li>Write detailed commit messages: &nbsp;I can&#8217;t recommend this one enough. Ever since i am introduced to this practise, i could easily feel the improvement in me and my code. It prefer it to writing long comments in my code. Wherever you did something that needs to be explained or if you did a hack to resolve some particular issue, make sure you address these parts in your commit message. It really helps because whenever your codebase gets bigger.A new developers could just take a look at the code and commit message and will be more comfortable getting up to speed. Also, if you are working on an open source project or contributing to one, chances are really high that your pull request will be merged. &nbsp;One reason for this is that, the person merging your code will not have to dive deep into your code to make sense of that you did back there. Your &#8216;detailed commit message&#8217; will serve its purpose then.</li><li>Teach yourself about writing maintainable code: Always, try to think about writing maintainable code. It might not be possible every time, since sometimes deadlines won&#8217;t allow it. But make a point to revisit that code and fix that hackery you did back there to resolve the issue. This is really important, because sooner to later, that hackery/bug will come to bite you again and things could get really ugly.</li><li>Know your editor: You should and must configure your editor for the language your code on. It must have all the required plugins to do live linting while you code. If you do python or JS, there are some pretty great plugins available for both the languages in Vim and Sublime Text2. Also, get familiar with some good snippets generating plugins for frameworks, HTML and CSS. There are pretty great plugins to beautify and minify your code as well. They really help in getting the whole code quality better.</li><li>Automate all repetitive tasks: At this time, we are pretty much equipped with the technologies such as grunt and yeoman which could automate a lot of part that you had to waste your time doing again and again. You must also learn about git hooks. For example: I made a git pre-commit hook to compile less into css and run jshint, concat and uglify operations on my javascript code any time someone changes them. This is great because my workflow prevents any bad code to enter the codebase.</li><li>Read good code, data structures and Algorithms: There is no end of learning. Teach yourself to read more and more good code. You must spend time getting better with data structures and algorithms. They might not prove useful immediately, but it will make you a better developer and will enable you to take better decisions in future.</li><li>Watch talks and presentations: Be regular to watch great talks and presentations from the various conferences round the year. They give some pretty great information about the latest trends and techniques. You could easily find them on YouTube/Vimeo and SpeakerDeck.&nbsp;</li></ol><div><br /></div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-gXvgVkXBX4c/UeqghTlgEBI/AAAAAAAACAU/aYPFFsvrRtE/s1600/yoda.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="190" src="http://3.bp.blogspot.com/-gXvgVkXBX4c/UeqghTlgEBI/AAAAAAAACAU/aYPFFsvrRtE/s400/yoda.jpg" width="400" /></a></div><div><br /></div></div>
 </div>
@@ -289,9 +289,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Json2xml: A Lightweight Python Module to Convert Json Data to Xml]]></title>
-    <link href="http://gotchacode.github.io/2013/07/json2xml-lightweight-python-module-to.html"/>
+    <link href="http://gotchacode.com/2013/07/json2xml-lightweight-python-module-to.html"/>
     <updated>2013-07-20T13:29:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/07/json2xml-lightweight-python-module-to</id>
+    <id>http://gotchacode.com/2013/07/json2xml-lightweight-python-module-to</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">A year before i wrote a simple python module to covert json data to xml. It is fairly straight forward and efficient to use.&nbsp;<div><br /></div><div>It is available at Pypi and you can install it easily using : `pip install json2xml`</div><div><br /></div><div>Also, here is the link of the project on Github:&nbsp;https://github.com/vinitcool76/json2xml . The project also has an example file in it. Just run it and you will understand its working.</div></div> <script src="https://gist.github.com/vinitcool76/6044989.js"></script>
 </div>]]></content>
@@ -299,9 +299,9 @@ I am listing some of them here:</p>
   
   <entry>
     <title type="html"><![CDATA[Demo Post]]></title>
-    <link href="http://gotchacode.github.io/blog/2013/07/02/demo-post/"/>
+    <link href="http://gotchacode.com/blog/2013/07/02/demo-post/"/>
     <updated>2013-07-02T00:00:00+05:30</updated>
-    <id>http://gotchacode.github.io/blog/2013/07/02/demo-post</id>
+    <id>http://gotchacode.com/blog/2013/07/02/demo-post</id>
     <content type="html"><![CDATA[<p>This is a demo post for showing the jekyll theme. Jekyll lets you write
 your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
 
@@ -385,19 +385,19 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[Talks and Videos That Could Make You a Better Developer]]></title>
-    <link href="http://gotchacode.github.io/2013/06/talks-and-videos-that-could-make-you.html"/>
+    <link href="http://gotchacode.com/2013/06/talks-and-videos-that-could-make-you.html"/>
     <updated>2013-06-01T19:17:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/06/talks-and-videos-that-could-make-you</id>
+    <id>http://gotchacode.com/2013/06/talks-and-videos-that-could-make-you</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on">Hey fellas, sorry for not actively blogging these months. But, I have some interesting stuff for you guys.<br /><br />Development is a complex process and it requires a lot of skill,&nbsp;hard work&nbsp;and techniques to be a really good developer. Recently, I &nbsp;came across a lot of good stuff and things are improving for me quite positively. I wanted to share the same with you.<br /><br />These are mostly talks, videos or presentation by some really popular, successful people from our industry. The tips they give are mostly an eye opener. Hope you enjoy them.<br /><br /><script async="" class="speakerdeck-embed" data-id="505376778282a900020560da" data-ratio="1.33333333333333" src="http://gotchacode.github.io//speakerdeck.com/assets/embed.js"></script> Also, here is another great presentation by the same guy.  <script async class="speakerdeck-embed" data-id="d3f56f007adf01307e7722000a9f0395" data-ratio="1.77777777777778" src="http://gotchacode.github.io//speakerdeck.com/assets/embed.js"></script><br /><br />The next talk is by Heroku co-founder Adam. This is single most awesome talk i have seen in recent times and is a must watch.<br /><br />&nbsp;   <iframe allowfullscreen="" frameborder="0" height="300" mozallowfullscreen="" src="http://player.vimeo.com/video/49701839" webkitallowfullscreen="" width="400"></iframe> I<br /><br />&nbsp;Hope you guys enjoy &#8216;em and keep doing great work! </div>
+<div dir="ltr" style="text-align: left;" trbidi="on">Hey fellas, sorry for not actively blogging these months. But, I have some interesting stuff for you guys.<br /><br />Development is a complex process and it requires a lot of skill,&nbsp;hard work&nbsp;and techniques to be a really good developer. Recently, I &nbsp;came across a lot of good stuff and things are improving for me quite positively. I wanted to share the same with you.<br /><br />These are mostly talks, videos or presentation by some really popular, successful people from our industry. The tips they give are mostly an eye opener. Hope you enjoy them.<br /><br /><script async="" class="speakerdeck-embed" data-id="505376778282a900020560da" data-ratio="1.33333333333333" src="http://gotchacode.com//speakerdeck.com/assets/embed.js"></script> Also, here is another great presentation by the same guy.  <script async class="speakerdeck-embed" data-id="d3f56f007adf01307e7722000a9f0395" data-ratio="1.77777777777778" src="http://gotchacode.com//speakerdeck.com/assets/embed.js"></script><br /><br />The next talk is by Heroku co-founder Adam. This is single most awesome talk i have seen in recent times and is a must watch.<br /><br />&nbsp;   <iframe allowfullscreen="" frameborder="0" height="300" mozallowfullscreen="" src="http://player.vimeo.com/video/49701839" webkitallowfullscreen="" width="400"></iframe> I<br /><br />&nbsp;Hope you guys enjoy &#8216;em and keep doing great work! </div>
 </div>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[JavaScript Is an Adult , See What It Can Do Now.]]></title>
-    <link href="http://gotchacode.github.io/2013/06/javascript-is-adult-now-see-what-it-can.html"/>
+    <link href="http://gotchacode.com/2013/06/javascript-is-adult-now-see-what-it-can.html"/>
     <updated>2013-06-01T18:48:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/06/javascript-is-adult-now-see-what-it-can</id>
+    <id>http://gotchacode.com/2013/06/javascript-is-adult-now-see-what-it-can</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="http://img.youtube.com/vi/qrf9ONmtXbM/0.jpg" height="266" width="320"><param name="movie" value="http://youtube.googleapis.com/v/qrf9ONmtXbM&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="http://youtube.googleapis.com/v/qrf9ONmtXbM&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div>The first version of JS was released in 10 days. Enjoy this talk by it&#8217;s founder. Enjoy it with some good coffee.<br /><br /></div>
 </div>]]></content>
@@ -405,9 +405,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[Modern Development Workflow for a Team]]></title>
-    <link href="http://gotchacode.github.io/2013/03/modern-development-workflow-for-team.html"/>
+    <link href="http://gotchacode.com/2013/03/modern-development-workflow-for-team.html"/>
     <updated>2013-03-06T12:55:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/03/modern-development-workflow-for-team</id>
+    <id>http://gotchacode.com/2013/03/modern-development-workflow-for-team</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Development is a complex process and it becomes more complex when many people are pushing code on a same codebase.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-zgWrPP9y-1Y/UTc8xKggOHI/AAAAAAAABCI/kQV7RWOI7s0/s1600/Team+Development+Right.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="254" src="http://2.bp.blogspot.com/-zgWrPP9y-1Y/UTc8xKggOHI/AAAAAAAABCI/kQV7RWOI7s0/s320/Team+Development+Right.jpg" width="320" /></a></div><br /><br /><ul style="text-align: left;"><li>Ideally a development workflow should be asynchronous, so that one does his work and fixes the issues assigned to him and doesn&#8217;t get stalled by his team member&#8217;s progress.&nbsp;</li><li>In order to implement this, put up you more competent programmers to pair for a dependent modules such that that doesn&#8217;t get stuck if one of the two programmer lag.&nbsp;</li><li>If two developers are working for different modules in a project, working on a DVCS such as Git is a great boon. Also, Github gives a great workflow with Issues and Pull Request. Issues and milestones are a great way to schedule you development such that there is no mistake in planning. You get set tag on the issues so that developer will know what is the high priority task, and plan accordingly.&nbsp;</li><li>Make sure your team members are competent if not experts with Git, it really helps if everyone uses git wisely. Private repos are handy as well when you are working on commercial stuff.</li><li>Using git-flow is a good choice. It truly brings sanity into the development workflow using Github and git.&nbsp;</li><li>Realtime chatting via Skype is also a good choice, developers could ask stuff from each other without breaking other&#8217;s flow.&nbsp;</li><li>Also, make sure you people plan and discuss with each other before a days work and review at the end of day. One things is for sure, following this process will have you a more effective team.</li></ul><div>Thats&#8217;s it folks. If you like the post follow me on twitter :&nbsp;<a href="http://twitter.com/vinitcool76" target="_blank">@vinitcool76</a></div><br /><br /></div>
 </div>]]></content>
@@ -415,9 +415,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[Guide to Start With Application Development.]]></title>
-    <link href="http://gotchacode.github.io/2013/02/guide-to-start-with-application.html"/>
+    <link href="http://gotchacode.com/2013/02/guide-to-start-with-application.html"/>
     <updated>2013-02-26T14:30:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/02/guide-to-start-with-application</id>
+    <id>http://gotchacode.com/2013/02/guide-to-start-with-application</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">In my opinion the best way to learn a language is to develop applications in it once you are comfortable with the syntax.<br />It is a great learning process and teaches much more than what reading a book will teach you. Development is itself a very vast process, let me detail &nbsp;a very specific part of development. Web Based Application Development<br />Since it is a web based application, obviously you will have two parts, client side and server side.<br /><b>For Client Side Applications: </b>You can start with development of Chrome Extensions or Firefox Extensions. Alternatively, you can develop some Facebook or twitter Application. It will give you a great exposure to REST, plus you will get to work in the latest technologies as well.<br /><b>For Server Side Applications:</b><br />Try and develop an restful API system, such as some API for a facebook Application where the Server crunches your data and you have some meaningful information in your application. It might sound easy but its actually a quite tough thing to accomplish. Still it is a great learning experience. You might want to refer some good books in this process.<br /><br />Well, the point is you might not become a star developer of a sudden, but it will be one of the most rewarding experience in your software development process. Learning by doing, rather learning by failing in a very good process.<br /><br />So take a crazy idea and Start hacking!<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-3ePArKjFU2A/USzG-_LkJ5I/AAAAAAAABB0/4hGtwnLsTzQ/s1600/kung_fu_master_shifu_1920x1080.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="http://2.bp.blogspot.com/-3ePArKjFU2A/USzG-_LkJ5I/AAAAAAAABB0/4hGtwnLsTzQ/s400/kung_fu_master_shifu_1920x1080.jpg" width="400" /></a></div><br /><br />± May The Force Be With You!&nbsp;</div>
 </div>]]></content>
@@ -425,9 +425,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[How to Setup a Mac for Web Development.]]></title>
-    <link href="http://gotchacode.github.io/2013/02/how-to-setup-mac-for-web-development.html"/>
+    <link href="http://gotchacode.com/2013/02/how-to-setup-mac-for-web-development.html"/>
     <updated>2013-02-24T17:56:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/02/how-to-setup-mac-for-web-development</id>
+    <id>http://gotchacode.com/2013/02/how-to-setup-mac-for-web-development</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Macs are beautiful machine. Luckily, I own a Macbook Pro that has 8GB ram and 256GB SSD. I am a Web Developer by profession so here are some tips that you could use to setup your mac.<br /><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-UGabibWAlr8/USpTz8VpRUI/AAAAAAAABBk/ry2cD5pt7eM/s1600/Screen+Shot+2013-02-24+at+11.22.59+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="250" src="http://3.bp.blogspot.com/-UGabibWAlr8/USpTz8VpRUI/AAAAAAAABBk/ry2cD5pt7eM/s400/Screen+Shot+2013-02-24+at+11.22.59+PM.png" width="400" /></a></div><ul style="text-align: left;"><li>Install Xcode: Install Xcode,&nbsp;preferably&nbsp;the full version, if you might like to develop for iOS or iPad. It is a free download from App Store.</li><li>Install Homebrew: This is a must and it is really satisfies the need to package manager in OSX.</li><li>Install dotfiles: Please use dotfiles, there are many good ones already shared on Github. You can use any one of them from here. <a href="http://dotfiles.github.com/" target="_blank">Install Dotfiles</a></li><li>Install z, oh-my-zsh: Oh my zsh is one of the best and feature rich shell, do use it with combination of z. Z is a directory jumping tool and it is really handy. <a href="https://github.com/rupa/z" target="_blank">Install Z</a></li><li>Install and configure a text editor: Install Sublime Text2, Vim or Emacs as your text editor. They are most extensible and powerful editors and you can configure them to satisfy all your needs. Make sure you invest sometime configuring it to your taste and needs. It will be intensely productive and satisfying experience.</li><li>Install Node and NPM: If you are web developer , you must have dealt with JavaScript. You must install both of them. Not only it extends the package manager needs, it is basis of other good package managers for web.</li><li>Install Component, Yeoman, Bower and Grunt. These are some&nbsp;indispensable&nbsp;tools that are very important for any web /&nbsp;web app&nbsp;developer.</li><li>Install Chrome Canary: If you want to get the best Developer tools available , install chrome canary. It is the latest and provide great support for various things such as sass, compass etc inbuilt.</li><li>Install Google drive and dropbox: Please keep your important stuff in cloud so that you may never loose your data again. Also, you can backup your code in Github.</li><li>Install SizeUP: It is one of most productive software on mac and provides such great arrangement of Windows that you will be amazed. Either buy it or install the trial version.&nbsp;<a href="http://www.irradiatedsoftware.com/" target="_blank">Install Sizeup</a></li><li>Install Git and create a account on Github, if you haven&#8217;t already. There is such a vibrant community on Github, mostly great web developers that if you are not updated with it.You will loose great deal of useful information.</li><li>Automate most of the grunt jobs you do daily. Use build tools such as Make, Cake, Jake etc. Also, learn little bit of shell scripting. It really helps in long run.</li><li>Install Python and the module install tools such a pip and easy_install. It is really a must.</li><li>Install Ruby and ROR. They have pretty good community. Just a basis google search will get you going about the install and use process.</li><li>Install VirtualBox, it is an invaluable thing if you have to use another OS such as Windows or Ubuntu.</li></ul><div>I guess these are pretty exhaustive list of TODOS if you using mac for web/web-app development. I will keep updating the post if i remember any more important thing. The baseline is that macs are great piece of hardware and a pretty decent OS, so invest sometime in setting it up. It will save you tons of time and frustation. Have a good weekend, Enjoy!</div></div>
 </div>]]></content>
@@ -435,9 +435,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[Configure Sublime Text2 for JavaScript Development.]]></title>
-    <link href="http://gotchacode.github.io/2013/02/configure-sublime-text2-for-javascript.html"/>
+    <link href="http://gotchacode.com/2013/02/configure-sublime-text2-for-javascript.html"/>
     <updated>2013-02-24T11:19:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/02/configure-sublime-text2-for-javascript</id>
+    <id>http://gotchacode.com/2013/02/configure-sublime-text2-for-javascript</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">I recently started using Sublime Text2 full time at work after being a vim user for more than 4 years. Vim is really good but it takes sometime to configure it properly. Well this is not a Vim vs ST2 debate. It is more of a vim user shifting to ST2 Tip.<br /><br />The first thing that you should do is to install package control, it provide really good 3rd party plugins. You can check out the link how to install it.&nbsp;<a href="http://wbond.net/sublime_packages/package_control/installation" target="_blank">Install Package Control</a><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-VyTJ6GhccRQ/USn4XUWXanI/AAAAAAAABBU/JM261l4WaZw/s1600/Screen+Shot+2013-02-24+at+4.52.12+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="250" src="http://4.bp.blogspot.com/-VyTJ6GhccRQ/USn4XUWXanI/AAAAAAAABBU/JM261l4WaZw/s400/Screen+Shot+2013-02-24+at+4.52.12+PM.png" width="400" /></a></div><br /><br />Once done with that open package manager and install these useful plugins<br /><br /><ul style="text-align: left;"><li>JSHint.</li><li>JSLint.</li><li>DocBlockr.</li><li>AngularJS.</li><li>Mocha &amp; Mocha snippet&nbsp;</li><li>NodeJS.</li><li>Live Reload.</li><li>AMD Module Editor</li><li>Backbone.js</li><li>Pretty JSON</li><li>Require Node.js Module Helper</li></ul><div><br /></div><div>Among, these plugins mocha is the test runner and mocha snippets provides you will snippets to write the tests very fast. Also, there is good plugin for vim mode in Sublime Text2, you can use that if you don&#8217;t want to waste the muscle memory.&nbsp;I highly recommend the real time linting with JSHint. It will make you so much more&nbsp;productive and improve your code as well. It acts as the first unit test against the code you just wrote.&nbsp;</div><div><br /></div><div>One more important thing, you could set the indentation with tab width equals to 2 spaces. It is a very sane default while writing JavaScript code.</div><div><br /></div><div>What really struck me was that Sublime Text enabled me to do almost everything i did with Vim without going into the pain of configuration. Also, the learning curve is not at all steep so i could get productive real fast.</div></div>
 </div>
@@ -511,9 +511,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[Happy New Year Readers!]]></title>
-    <link href="http://gotchacode.github.io/2013/01/happy-new-year-readers.html"/>
+    <link href="http://gotchacode.com/2013/01/happy-new-year-readers.html"/>
     <updated>2013-01-15T14:01:00+05:30</updated>
-    <id>http://gotchacode.github.io/2013/01/happy-new-year-readers</id>
+    <id>http://gotchacode.com/2013/01/happy-new-year-readers</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Best wishes for the New Year fellas, Last year this blog clocked more than 20k hits from all over the world.<br />Here are some stats:<br /><br />Top 3 most hits :<br />Country Wise:<br /><br /><ol style="text-align: left;"><li>USA</li><li>India</li><li>UK</li></ol><div>Operating System wise:&nbsp;</div><div><ol style="text-align: left;"><li>Window</li><li>OS X</li><li>Linux</li></ol><div>Browsers wise:</div></div><div><ol style="text-align: left;"><li>Chrome</li><li>Firefox</li><li>Safari</li></ol><div>With that said, recently most the posts are related to software development and programming, so this time i will try to improve the quality of posts and will be showcasing an Open Source project each week.&nbsp;</div></div><div><br /></div><div>Keep reading!</div></div>
 </div>]]></content>
@@ -521,9 +521,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[How to Subscribe Any Tag on Stackoverflow?]]></title>
-    <link href="http://gotchacode.github.io/2012/12/how-to-subscribe-any-tag-on.html"/>
+    <link href="http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on.html"/>
     <updated>2012-12-25T13:57:00+05:30</updated>
-    <id>http://gotchacode.github.io/2012/12/how-to-subscribe-any-tag-on</id>
+    <id>http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s1600/sub.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="179" src="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s320/sub.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><br />If you are developer of any kind you must have faced some issue and to resolve those you must have browsed Stackoverflow or related site. Here is how you can subscribe to particular tags or topics. See the screenshot below.<br /><br />Say if you want to subscribe to all new questions related to Python , just fill in your tag, enter your email and mail frequency and you are good to go. Also you will need to confirm this subscription in your mail. Hope this helps you folks.<br /><div><br /></div></div>
 </div>]]></content>
@@ -531,9 +531,9 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   
   <entry>
     <title type="html"><![CDATA[How to Setup an Ideal Front End Development Stack in Ubuntu 12.04?]]></title>
-    <link href="http://gotchacode.github.io/2012/12/how-to-setup-ideal-front-end.html"/>
+    <link href="http://gotchacode.com/2012/12/how-to-setup-ideal-front-end.html"/>
     <updated>2012-12-21T17:07:00+05:30</updated>
-    <id>http://gotchacode.github.io/2012/12/how-to-setup-ideal-front-end</id>
+    <id>http://gotchacode.com/2012/12/how-to-setup-ideal-front-end</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Starting with Front-End Development and looking for a robust setup?<br /><br />Install Ubuntu 12.04 and&nbsp;here are some of the tools and tips that could come handy if you are configuring it for the first time. I am not detailing on how to install these tools but rather would suggest on what could be good setup for&nbsp;development..<br /><b><br /></b><b>IDE</b>: This is where you spend most of the time. So choose wisely among Sublime Text2, Vim or Emacs. Vim and Emacs are entirely customizable and comes with loads of plugin that would really improve your&nbsp;efficiency. Sublime text is an awesome code editor and you must try it first as it is highly effective and has a lower learning curve. Also there are loads of good plugins available that makes it a handy tool.<br /><div style="text-align: left;"><br /><b>Servers</b>: Install&nbsp;Apache 2,&nbsp;nginx and Node. This would cover most of the modern web server stack. Though node is technically not a server. But I hope you get my point.</div><div style="text-align: left;">Once Node and npm are installed there are some indispensable packages you must use. <b><i>UglifyJS </i></b>among others is a pretty handy one.&nbsp;Install<b><i> Compass </i></b>and <b><i>CoffeeScript</i></b>, also setup up <b><i>jslint/jshint</i></b> with your IDE. It will ensure a habit of shipping out quality code.<br /><br /><b>Browser<i>: Use the latest and nightly builds of Chromium/&nbsp;Firefox</i></b>, you should work with latest once so not miss any good feature/ improvements.</div><ul style="text-align: left;"><li>Install the <i style="font-weight: bold;">latest production release of Ruby, Python and Java, PHP </i>or whatever is your choice of language.&nbsp;</li><li>Learn<b><i> Version control </i></b>such as <b>git</b> and invest some time to learn it. It would save you tonnes of time later.</li><li>Last but not the least use<a href="http://www.blogger.com/%C2%A0http://yeoman.io/" target="_blank">&nbsp;yeoman</a>&nbsp;. It is really gem of a tool, it , it gives a robust set of tools , libraries and a workflow that most of top developers use. Invest sometime in learning and using it and you will be always glad that you did.&nbsp;</li></ul><br /><div style="text-align: left;"><br /></div><div style="text-align: left;">Installing each one them on Ubuntu 12.04 is easy and obviously it is free and freakishly stable. Configure once and worry about the important aspects of&nbsp;development.</div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div></div>
 </div>]]></content>

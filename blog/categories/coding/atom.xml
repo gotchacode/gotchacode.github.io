@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Coding | Gotchacode]]></title>
-  <link href="http://gotchacode.github.io/blog/categories/coding/atom.xml" rel="self"/>
-  <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T21:48:13+05:30</updated>
-  <id>http://gotchacode.github.io/</id>
+  <link href="http://gotchacode.com/blog/categories/coding/atom.xml" rel="self"/>
+  <link href="http://gotchacode.com/"/>
+  <updated>2014-02-14T22:07:10+05:30</updated>
+  <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
     <email><![CDATA[vinitcool76@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Three Beautiful Quicksorts]]></title>
-    <link href="http://gotchacode.github.io/2011/10/three-beautiful-quicksorts.html"/>
+    <link href="http://gotchacode.com/2011/10/three-beautiful-quicksorts.html"/>
     <updated>2011-10-30T04:01:00+05:30</updated>
-    <id>http://gotchacode.github.io/2011/10/three-beautiful-quicksorts</id>
+    <id>http://gotchacode.com/2011/10/three-beautiful-quicksorts</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <object height="350" width="425"><br/>      <param name="movie" value="http://www.youtube.com/v/aMnn0Jq0J-E&amp;feature=feedwll"><br/>      <param name="wmode" value="transparent"><br/>      <embed src="http://www.youtube.com/v/aMnn0Jq0J-E&amp;feature=feedwll;rel=0" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"><br/>      </object>
 </div>

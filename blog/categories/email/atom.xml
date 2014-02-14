@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Email | Gotchacode]]></title>
-  <link href="http://gotchacode.github.io/blog/categories/email/atom.xml" rel="self"/>
-  <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T21:48:13+05:30</updated>
-  <id>http://gotchacode.github.io/</id>
+  <link href="http://gotchacode.com/blog/categories/email/atom.xml" rel="self"/>
+  <link href="http://gotchacode.com/"/>
+  <updated>2014-02-14T22:07:10+05:30</updated>
+  <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
     <email><![CDATA[vinitcool76@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Subscribe Any Tag on Stackoverflow?]]></title>
-    <link href="http://gotchacode.github.io/2012/12/how-to-subscribe-any-tag-on.html"/>
+    <link href="http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on.html"/>
     <updated>2012-12-25T13:57:00+05:30</updated>
-    <id>http://gotchacode.github.io/2012/12/how-to-subscribe-any-tag-on</id>
+    <id>http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s1600/sub.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="179" src="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s320/sub.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><br />If you are developer of any kind you must have faced some issue and to resolve those you must have browsed Stackoverflow or related site. Here is how you can subscribe to particular tags or topics. See the screenshot below.<br /><br />Say if you want to subscribe to all new questions related to Python , just fill in your tag, enter your email and mail frequency and you are good to go. Also you will need to confirm this subscription in your mail. Hope this helps you folks.<br /><div><br /></div></div>
 </div>
