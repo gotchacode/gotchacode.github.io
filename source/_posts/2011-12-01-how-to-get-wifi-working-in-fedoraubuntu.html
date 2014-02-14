@@ -1,0 +1,41 @@
+---
+title: "How To Get WiFi working in Fedora/Ubuntu"
+layout: "post"
+permalink: "/2011/12/how-to-get-wifi-working-in-fedoraubuntu.html"
+uuid: "2115635009809453697"
+guid: "tag:blogger.com,1999:blog-8151684071475042498.post-2115635009809453697"
+date: "2011-12-01 11:22:00"
+updated: "2012-08-30 13:13:21"
+description: 
+blogger:
+    siteid: "8151684071475042498"
+    postid: "2115635009809453697"
+    comments: "1"
+categories: [operating systems, latest]
+author: 
+    name: "Vinit Kumar"
+    url: "https://plus.google.com/106645023605660581419?rel=author"
+    image: "//lh3.googleusercontent.com/-eC-n0AzrUyg/AAAAAAAAAAI/AAAAAAAACaw/fYGPSsG3y70/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+Hello everyone! Most of you must have faced some problems regarding your wireless drivers and it might not be working properly or working at all. Here is a quick guide how you can sort out this problem. The error must have been device not ready-firmware missing.<br/><br/>The guide is as follows: Download the drivers from this link <strong>http://downloads.openwrt.org/sources/broadcom-wl-4.150.10.5.tar.bz2.</strong><br/><br/>Now to need to extract the file.For that you need to go to directory where the file is downloaded. Open your terminal and type <strong>cd /home/username/Downloads</strong> and then type <strong>tar -xjf broadcom-wl-4.150.10.5.tar.bz2</strong>.When you type this command what it does is that all the content of the tarball gets extracted in the same directory the tarball is. Now get into Superuser shell because you will be needing full rights.For this you can type su -- and followed by root passwd if you are using fedora and alikes. If using Ubuntu/mint/ type <strong>sudo -s</strong> and then followed by passwd. You will get into root shell and will get # instead of $. Now you need to change the directory to the extracted drivers. For this type <strong>cd /home/username/Downloads/broadcom-wl-4.150.10.5/driver/</strong> Finally you need to extract all the drivers to the relevant directory.For this type :<strong> #b43-fwcutter -w /lib/firmware wl_apsta_mimo.o</strong> Now restart your system and guess what you can use your wifi without any hitch.
+</div>
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://ubuntu.pici.nu/2011/12/07/how-to-get-wifi-working-in-fedoraubuntu-%c2%ab-a-guide-to-your-digital/">
+  <div class="css-comment-name js-comment-name">
+    How To Get WiFi working in Fedora/Ubuntu « A guide to your digital … | Pici&#39;s Ubuntu Blog
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2011-12-07T19:52:32.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    [...] the original post: How To Get WiFi working in Fedora/Ubuntu « A guide to your digital …   This entry was posted in all, and, DE, Drive, drivers, ever, GUI, guide, here, how, in, is, it, [...]
+  </div>
+  <br/>
+</div>
+</div>

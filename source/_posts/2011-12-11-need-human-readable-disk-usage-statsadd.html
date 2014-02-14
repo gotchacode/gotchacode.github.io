@@ -1,0 +1,57 @@
+---
+title: "Need Human Readable Disk Usage Stats,Add This Script"
+layout: "post"
+permalink: "/2011/12/need-human-readable-disk-usage-statsadd.html"
+uuid: "8082204699252788687"
+guid: "tag:blogger.com,1999:blog-8151684071475042498.post-8082204699252788687"
+date: "2011-12-11 21:07:00"
+updated: "2012-08-30 13:13:21"
+description: 
+blogger:
+    siteid: "8151684071475042498"
+    postid: "8082204699252788687"
+    comments: "2"
+categories: [latest]
+author: 
+    name: "Vinit Kumar"
+    url: "https://plus.google.com/106645023605660581419?rel=author"
+    image: "//lh3.googleusercontent.com/-eC-n0AzrUyg/AAAAAAAAAAI/AAAAAAAACaw/fYGPSsG3y70/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+If you want a more human readable Disk Usage stats while using linux, add the following script to your .bashrc<br/><pre>alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s&lt;1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'</pre><br/>You should add it under User specified Functions and aliases. When you are done with it this is what you will see when you type duf in your terminal.<br/><br/><a href="http://gotchacode.files.wordpress.com/2011/12/pic4.png"><img class="alignleft size-full wp-image-579" title="pic4" src="http://gotchacode.files.wordpress.com/2011/12/pic4.png" alt="" width="580" height="326" /></a>
+</div>
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://administratosphere.wordpress.com/">
+  <div class="css-comment-name js-comment-name">
+    ddouthitt
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-14T04:20:00.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    This is nice, but how about using the -h option to du?<br><br>$ du -sh *<br>17M     bugzilla-3.4.6<br>36K     hsperfdata_root<br>52M     new<br>42M     old<br>0       sfcbLocalSocket<br>4.0K    ssh-ffOOT30605<br>
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://administratosphere.wordpress.com/">
+  <div class="css-comment-name js-comment-name">
+    ddouthitt
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-14T04:26:56.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Could you remove the line in my message labelled &quot;mapping&quot; (thanks!).
+  </div>
+  <br/>
+</div>
+</div>
