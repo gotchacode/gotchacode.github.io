@@ -1,2 +1,10 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+h2 {
+  color: #000;
+}
+
+body > header {
+  background: #55acee;
+}
