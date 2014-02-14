@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://gotchacode.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Gotchacode
+subtitle: A Guide To Your Digital Life.
+author: Vinit Kumar
 simple_search: http://google.com/search
-description:
+description: Blog about Web Programming, Development and Life.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: vinitcool76@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -63,13 +63,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: gotchacode 
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: vinitkme
 twitter_tweet_button: true
 
 # Google +1
