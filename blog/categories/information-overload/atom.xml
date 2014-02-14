@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Information Overload | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Information Overload | Gotchacode]]></title>
   <link href="http://gotchacode.github.io/blog/categories/information-overload/atom.xml" rel="self"/>
   <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T11:32:25+05:30</updated>
+  <updated>2014-02-14T11:42:23+05:30</updated>
   <id>http://gotchacode.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Vinit Kumar]]></name>
+    <email><![CDATA[vinitcool76@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
