@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.github.io/atom.xml" rel="self"/>
   <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T21:09:58+05:30</updated>
+  <updated>2014-02-14T21:39:29+05:30</updated>
   <id>http://gotchacode.github.io/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -18,26 +18,26 @@
     <link href="http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/"/>
     <updated>2014-02-14T20:39:36+05:30</updated>
     <id>http://gotchacode.github.io/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django</id>
-    <content type="html"><![CDATA[<p>Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. Infact the whole ecosystem is fueled by images. In order to scale for the vast user base of basebook, they have done a really good job.</p>
+    <content type="html"><![CDATA[<p>Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. In fact the whole ecosystem is fueled by images. In order to scale for the vast user base of Facebook, they have done a really good job.</p>
 
 <p>So what if you don&rsquo;t want to use your own storage for uploading images and want to use Facebook for Images? It would be so cool, right?
 There are two benefits:</p>
 
 <ul>
-<li>You don&rsquo;t have to spend anytime setting up an app or service to deal with images. Believe me it is a real tough problem to solve given the size and count of images. You can&rsquo;t put a bar on either of these two.</li>
-<li>It gives your users a much user friendly way. They upload images just once on facebook and it automagically appears on your website. Facebook almost never gets down so there is very good chance you will get a 99.9% uptime.</li>
+<li>You don&rsquo;t have to spend anytime setting up an app or service to deal with images. Believe me it is a real tough problem to solve given the size and count of images. You can&rsquo;t put a bar on either of these two.F</li>
+<li>It gives your users a much user friendly way. They upload images just once on Facebook and it auto-magically appears on your website. Facebook almost never gets down so there is very good chance you will get a 99.9% uptime.</li>
 </ul>
 
 
-<p>So, In order to fix this problem last year I created a Ajax based plugins to fetch images from facebook album. It asked user to enter album URL and name. But there was an issue with this approach. In order to get access to facebook graph database it has to get access tokens and each access token only last two months. Plus, it collapsed when it faced IE, since there is unsolvable CORS issue with IE &lt; 9 (our 50% client base for that project).</p>
+<p>So, In order to fix this problem last year I created a Ajax based plugins to fetch images from Facebook album. It asked user to enter album URL and name. But there was an issue with this approach. In order to get access to Facebook graph database it has to get access tokens and each access token only last two months. Plus, it collapsed when it faced IE, since there is unsolvable CORS issue with IE &lt; 9 (our 50% client base for that project).</p>
 
-<p>It was a tough problem to solve. But i finally found some good articles and projects on internet. One such project was django-fbgallery. It used a really neat approach to get the facebook images server side and renders it the page purely server side. It not only solved the IE issue, but also the quality and speed of image loading became instant.</p>
+<p>It was a tough problem to solve. But i finally found some good articles and projects on Internet. One such project was django-fbgallery. It used a really neat approach to get the Facebook images server side and renders it the page purely server side. It not only solved the IE issue, but also the quality and speed of image loading became instant.</p>
 
-<p>But there was an issue with this app, it used URLS to render the albums and spoiled the pretty URLS that you would like for pages in Django. So I took the core part of the app ( the facebook interaction part) and made a sweet CMS plugin out of it.</p>
+<p>But there was an issue with this app, it used URLS to render the albums and spoiled the pretty URLS that you would like for pages in Django. So I took the core part of the app ( the Facebook interaction part) and made a sweet CMS plugin out of it.</p>
 
 <p>Here is the code to make it all work:</p>
 
-<figure class='code'><figcaption><span>facebook.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Facebook.py </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -85,7 +85,7 @@ There are two benefits:</p>
 </span><span class='line'><span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">defaultfilters</span>
 </span><span class='line'>
 </span><span class='line'>
-</span><span class='line'><span class="n">fql_url</span> <span class="o">=</span> <span class="s">&#39;https://api.facebook.com/method/fql.query&#39;</span>
+</span><span class='line'><span class="n">fql_url</span> <span class="o">=</span> <span class="s">&#39;https://api.Facebook.com/method/fql.query&#39;</span>
 </span><span class='line'><span class="n">cache_expires</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="s">&#39;CACHE_EXPIRES&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">def</span> <span class="nf">get_fql_result</span><span class="p">(</span><span class="n">fql</span><span class="p">):</span>
@@ -107,7 +107,7 @@ There are two benefits:</p>
 </span><span class='line'>    <span class="k">return</span> <span class="n">data</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">def</span> <span class="nf">display_album</span><span class="p">(</span><span class="n">album_id</span><span class="p">):</span>
-</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Display a facebook album</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Display a Facebook album</span>
 </span><span class='line'>
 </span><span class='line'><span class="sd">    First check that the album id belongs to the page id specified</span>
 </span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
@@ -148,7 +148,7 @@ There are two benefits:</p>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_base</span> <span class="kn">import</span> <span class="n">CMSPluginBase</span>
 </span><span class='line'><span class="kn">from</span> <span class="nn">cms.plugin_pool</span> <span class="kn">import</span> <span class="n">plugin_pool</span>
 </span><span class='line'><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">ugettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">facebook</span> <span class="kn">import</span> <span class="n">display_album</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">Facebook</span> <span class="kn">import</span> <span class="n">display_album</span>
 </span><span class='line'>
 </span><span class='line'><span class="kn">from</span> <span class="nn">models</span> <span class="kn">import</span> <span class="n">FacebookGallery</span>
 </span><span class='line'>
@@ -175,7 +175,7 @@ There are two benefits:</p>
 
 <p><a href="http://imgur.com/dmrxcXh"><img src="http://i.imgur.com/dmrxcXh.png" title="Hosted by imgur.com" /></a></p>
 
-<p>The plugin is open source here: <a href="https://github.com/changer/cmsplugin-fbgallery">cmsplugin-fbgallery</a> . Feel free to contribute and ask questions.</p>
+<p>The plugin is open sourced here: <a href="https://github.com/changer/cmsplugin-fbgallery">cmsplugin-fbgallery</a> . Feel free to contribute and ask questions.</p>
 ]]></content>
   </entry>
   
