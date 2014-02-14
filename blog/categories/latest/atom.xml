@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Latest | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/latest/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Staty- a Command Line Twitter Client.]]></title>
+    <link href="http://gotchacode.github.io/2012/05/staty-command-line-twitter-client.html"/>
+    <updated>2012-05-27T02:37:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/05/staty-command-line-twitter-client</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<object height="350" width="425"><br/>      <param name="movie" value="http://www.youtube.com/v/vq1mvi3BWWw"><br/>      <param name="wmode" value="transparent"><br/>      <embed src="http://www.youtube.com/v/vq1mvi3BWWw;rel=0" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"><br/>      </object>Here is the screencast of command line twitter client,I use on daily basis for using twitter. It also has some cool features. Don't forget to check them out after watching the video.
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Play Is On!]]></title>
+    <link href="http://gotchacode.github.io/2012/03/google-play-is-on.html"/>
+    <updated>2012-03-27T11:51:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/03/google-play-is-on</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<p>As expected Google Play has been activated. It is basically a place where you can shop for android apps. The interface looks clean and it has a quite small number of apps as of now.We’ll keep you posted about any further development if any that sprouts up. <a href="http://gotchacode.files.wordpress.com/2012/03/play-google.png"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="play-google" border="0" alt="play-google" src="http://gotchacode.files.wordpress.com/2012/03/play-google_thumb.png" width="562" height="318"></a></p>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some Intresting Shell Scripts]]></title>
+    <link href="http://gotchacode.github.io/2012/03/some-intresting-shell-scripts.html"/>
+    <updated>2012-03-15T23:06:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/03/some-intresting-shell-scripts</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Here are some shell scripts you will love to try and learn from.<br /><br />To find all the IP address in /etc directory<br /><br /><pre>find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \;<br /><br />Another Script</pre><pre>==============</pre><pre><br />#!/bin/bash<br /># idelete.sh: Deleting a file by its inode number.<br /><br />#  This is useful when a filename starts with an illegal character,<br />#+ such as ? or -.<br /><br />ARGCOUNT=1                      # Filename arg must be passed to script.<br />E_WRONGARGS=70<br />E_FILE_NOT_EXIST=71<br />E_CHANGED_MIND=72<br /><br />if [ $# -ne "$ARGCOUNT" ]<br />then<br />  echo "Usage: `basename $0` filename"<br />  exit $E_WRONGARGS<br />fi  <br /><br />if [ ! -e "$1" ]<br />then<br />  echo "File \""$1"\" does not exist."<br />  exit $E_FILE_NOT_EXIST<br />fi  <br /><br />inum=`ls -i | grep "$1" | awk '{print $1}'`<br /># inum = inode (index node) number of file<br /># -----------------------------------------------------------------------<br /># Every file has an inode, a record that holds its physical address info.<br /># -----------------------------------------------------------------------<br /><br />echo; echo -n "Are you absolutely sure you want to delete \"$1\" (y/n)? "<br /># The '-v' option to 'rm' also asks this.<br />read answer<br />case "$answer" in<br />[nN]) echo "Changed your mind, huh?"<br />      exit $E_CHANGED_MIND<br />      ;;<br />*)    echo "Deleting file \"$1\".";;<br />esac<br /><br />find . -inum $inum -exec rm {} \;<br />#                           ^^<br />#        Curly brackets are placeholder<br />#+       for text output by "find."<br />echo "File "\"$1"\" deleted!"<br /><br />exit 0<br /><br /></pre></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Setup]]></title>
+    <link href="http://gotchacode.github.io/2012/02/software-checklist-for-developer.html"/>
+    <updated>2012-02-03T18:24:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/02/software-checklist-for-developer</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Development&nbsp;is a craft and like every craftsman has his favorite tools here are my favorites.<br />I would present this in a interview style post. Here we go.<br /><br />What hardware you use?<br />I use a Dell Inspiron &nbsp;4GB&nbsp;Ram, 1 GB ATI graphics laptop. It has been 2 years and still it works just fine.While I do tweak my software to utilize the maximum of it. I have a Nokia E5 smartphone,its no Android or iPhone but this beast does its work pretty nicely. Also the camera quality is very nice.I also use a Logitech&nbsp;ultra-flat&nbsp;keyboard.I am planning on buying a new headphone and a 24 inch LED/LCD in future.<br /><br />What software?<br />I use both Linux and Windows so i will be splitting this answer in two parts.<br /><br />For Linux:<br />I use Ubuntu for almost everything, was a fedora user before but switched to Ubuntu because everything just works and development takes enough time so i don't have time tweaking and spending times on Fedoras and Archs.<br /><br /><ul style="text-align: left;"><li>Writing and Coding: Vim and Sometimes (Nano/Gedit)</li><li>Browser: Chromium and links(on command line mode)</li><li>Music: Clementine&nbsp;</li><li>Video : Vlc</li><li>UI Design: Qt Designer</li><li>Terminal: Konsole with tmux.</li><li>Chat/IRC: Skype, Pidgin, Irssi</li><li>Desktop&nbsp;Environment: KDE&nbsp;</li><li>PDF reader: Okular</li><li>Server: LAMP Stack, Also use nginx sometimes.</li><li>Preferable&nbsp;Language: Python and C, also sometime bash and&nbsp;Perl(learning)</li></ul><br />On Windows 7:<br /><br /><br /><ul style="text-align: left;"><li>Music: Winamp</li><li>Chat: Skype,&nbsp;Google talk</li><li>Image editing: Adobe Lightroom, Adobe&nbsp;Photoshop</li><li>Browser: Chrome</li><li>Cloud storage: Dropbox, Google Drive</li><li>Utilities: &nbsp;Daemon-tools, Putty, 7zip,Adobe Reader, MS Office 2010</li><li>Virtualization: Vmware workstation 8&nbsp;</li><li>Development and Coding Works: Simple SSH into my&nbsp;Linux&nbsp;server running in the Virtualbox.&nbsp;</li></ul><br /><br />What services you use?<br /><br /><br /><ul style="text-align: left;"><li>Code Hosting:&nbsp;I mostly use Github, Google Code to host my code. Eyeing on Heroku and RedHat Open Stack for hosting my apps as well.</li><li>Social Networking: Twitter, Facebook, Google+ and&nbsp;LinkedIn</li><li>Geek Social Networking/Learning space : Stackoverflow, Linux Reddit and Hacker News</li><li>Cloud Services: Google Drive and Dropbox.</li></ul><div><br /></div><div><br /></div><div>Dream Setup:</div><div><br /></div><div>I would like to have a 3-monitor setup with a beast running atleast 24GB of Ram and fastest Processor of that time.I would also have a dedicated Media Server plus a File Server as my laptop gets old.</div><div>Will be getting a sexy Keyboard as the one shown in Die Hard 4.0.</div><div>Also would like to have A DSLR and a nice Android Tablet, probably Nexus 7 or Galaxy Tab.</div><div>Also &nbsp;I would like to use something more beautiful than OS X and at the same time enjoy the freedom of Linux Stack.My Target is to build an amazing service for web and I am working on it. Will be posting as about it as i progress, Just one thing i can tell is that I would base it on Open Source and will contribute to it.</div><br /><br /><br /><br /><br /></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Need Human Readable Disk Usage Stats,Add This Script]]></title>
+    <link href="http://gotchacode.github.io/2011/12/need-human-readable-disk-usage-statsadd.html"/>
+    <updated>2011-12-11T21:07:00+05:30</updated>
+    <id>http://gotchacode.github.io/2011/12/need-human-readable-disk-usage-statsadd</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+If you want a more human readable Disk Usage stats while using linux, add the following script to your .bashrc<br/><pre>alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s&lt;1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'</pre><br/>You should add it under User specified Functions and aliases. When you are done with it this is what you will see when you type duf in your terminal.<br/><br/><a href="http://gotchacode.files.wordpress.com/2011/12/pic4.png"><img class="alignleft size-full wp-image-579" title="pic4" src="http://gotchacode.files.wordpress.com/2011/12/pic4.png" alt="" width="580" height="326" /></a>
+</div>
+
+
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://administratosphere.wordpress.com/">
+  <div class="css-comment-name js-comment-name">
+    ddouthitt
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-14T04:20:00.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    This is nice, but how about using the -h option to du?<br><br>$ du -sh *<br>17M     bugzilla-3.4.6<br>36K     hsperfdata_root<br>52M     new<br>42M     old<br>0       sfcbLocalSocket<br>4.0K    ssh-ffOOT30605<br>
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://administratosphere.wordpress.com/">
+  <div class="css-comment-name js-comment-name">
+    ddouthitt
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-14T04:26:56.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Could you remove the line in my message labelled &quot;mapping&quot; (thanks!).
+  </div>
+  <br/>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

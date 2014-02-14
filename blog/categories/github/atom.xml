@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Github | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Modern Development Workflow for a Team]]></title>
+    <link href="http://gotchacode.github.io/2013/03/modern-development-workflow-for-team.html"/>
+    <updated>2013-03-06T12:55:00+05:30</updated>
+    <id>http://gotchacode.github.io/2013/03/modern-development-workflow-for-team</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Development is a complex process and it becomes more complex when many people are pushing code on a same codebase.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-zgWrPP9y-1Y/UTc8xKggOHI/AAAAAAAABCI/kQV7RWOI7s0/s1600/Team+Development+Right.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="254" src="http://2.bp.blogspot.com/-zgWrPP9y-1Y/UTc8xKggOHI/AAAAAAAABCI/kQV7RWOI7s0/s320/Team+Development+Right.jpg" width="320" /></a></div><br /><br /><ul style="text-align: left;"><li>Ideally a development workflow should be asynchronous, so that one does his work and fixes the issues assigned to him and doesn't get stalled by his team member's progress.&nbsp;</li><li>In order to implement this, put up you more competent programmers to pair for a dependent modules such that that doesn't get stuck if one of the two programmer lag.&nbsp;</li><li>If two developers are working for different modules in a project, working on a DVCS such as Git is a great boon. Also, Github gives a great workflow with Issues and Pull Request. Issues and milestones are a great way to schedule you development such that there is no mistake in planning. You get set tag on the issues so that developer will know what is the high priority task, and plan accordingly.&nbsp;</li><li>Make sure your team members are competent if not experts with Git, it really helps if everyone uses git wisely. Private repos are handy as well when you are working on commercial stuff.</li><li>Using git-flow is a good choice. It truly brings sanity into the development workflow using Github and git.&nbsp;</li><li>Realtime chatting via Skype is also a good choice, developers could ask stuff from each other without breaking other's flow.&nbsp;</li><li>Also, make sure you people plan and discuss with each other before a days work and review at the end of day. One things is for sure, following this process will have you a more effective team.</li></ul><div>Thats's it folks. If you like the post follow me on twitter :&nbsp;<a href="http://twitter.com/vinitcool76" target="_blank">@vinitcool76</a></div><br /><br /></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Are Some Awesome Platform as a Service Options for Developers]]></title>
+    <link href="http://gotchacode.github.io/2012/10/what-are-some-awesome-platform-as.html"/>
+    <updated>2012-10-30T13:23:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/10/what-are-some-awesome-platform-as</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">If you are a developer, you must have felt the need to having a nice &nbsp;hosting platform &nbsp;where you can host your apps, &nbsp;do some testing and scaling. One can always buy a VPS hosting or an Amazon EC2 Instance but they cost money and need configuring/tuning them for optimum performance.<br /><br />Here are some three very cool and amazing services that are gaining a lot of traction.   <br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-T2mJSuXlqnU/UI_TGAkprdI/AAAAAAAAA3Y/ffL6titnGCA/s1600/screen7.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="196" src="http://3.bp.blogspot.com/-T2mJSuXlqnU/UI_TGAkprdI/AAAAAAAAA3Y/ffL6titnGCA/s320/screen7.png" width="320" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-41NRVj5pVIo/UI_TIRXAVII/AAAAAAAAA3g/tsZNtKoZVQI/s1600/screen8.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="171" src="http://4.bp.blogspot.com/-41NRVj5pVIo/UI_TIRXAVII/AAAAAAAAA3g/tsZNtKoZVQI/s320/screen8.png" width="320" /></a></div><br /><br /><ul style="text-align: left;"><li><a href="http://openshift.redhat.com/" target="_blank">OpenShift:</a>&nbsp;&nbsp;Red Hat's free, auto-scaling Platform as a Service (PaaS) for applications.It is &nbsp;an application platform in the cloud,also manages the stack so you can focus on your code. It supports a variety of Languages just as Java, PHP, Python, Node.js and Perl. A Full list can be viewed <a href="https://openshift.redhat.com/app/console/application_types" rel="nofollow" target="_blank">&nbsp;here</a>. Though it is relatively new but since it belongs to Red Hat , credibility &nbsp;is always there.</li></ul><ul style="text-align: left;"><li><a href="http://www.heroku.com/" rel="nofollow" target="_blank">Heroku:</a> Heroku is also a Platform as a Service and also has a free tier, that could satisfy any developer who's sole purpose is hosting his new Web or Mobile App. Currently it supports Ruby, Python, Clojure, Scala, &nbsp;Node.js and Java, which i am sure will satisfy most of the developers appetite.&nbsp;</li></ul><ul style="text-align: left;"><li><a href="http://github.com/" rel="nofollow" target="_blank">Github :</a>&nbsp;GitHub has recently rolled out GitHub Pages and you can host any static site and also you can point a custom domain to it. &nbsp;It is pretty good for&nbsp;portfolio&nbsp;kind of sites and is really easy to setup.&nbsp;</li></ul><div><br /></div><div>One advantage and key feature in all of these platforms have in common is that all of them are based on Git and use it for Version Control and Deployment. Also these have quite competent hosting so you will rarely have to worry about&nbsp;up-time&nbsp;and scaling. Heroku has some very cool way to scale you application. These also have very decent documentation, so getting started with them is not very tough. If are clear and comfortable with Git , everything will be easy and enjoyable.</div><div><br /></div><div><br /></div></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Github Watch: Languages]]></title>
+    <link href="http://gotchacode.github.io/2012/09/github-watch-languages.html"/>
+    <updated>2012-09-02T05:01:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/09/github-watch-languages</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on"><div style="text-align: justify;">Github is easily the world's largest repository for projects with almost all major companies as well as Startups &nbsp;use them to deploy their code or contribute to Open Source.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This is a small infographic of Top 10 Languages that are used to create projects at Github.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-HJeXwmNDfoo/UELkbL4YMHI/AAAAAAAAA1k/x6851ZQ7k_0/s1600/screen5.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="195" src="http://4.bp.blogspot.com/-HJeXwmNDfoo/UELkbL4YMHI/AAAAAAAAA1k/x6851ZQ7k_0/s400/screen5.png" width="400" /></a></div><div style="text-align: justify;">&nbsp;I will try to analyze what we can deduce from this data.&nbsp;</div><div style="text-align: justify;">JavaScript, Ruby and Python take first three places. It was quite obvious because Developers are more focused to develop stuff for web and these languages provide everything you need to create a great looking website or App that can scale. Node , Rails and Django are the most famous projects that are trending nowadays.</div><div style="text-align: justify;">One shocker is Shell Beating Java and PHP, well all we can make out from this data is that most of people or a huge percentage using Github are *nix users (either OS X or Linux ) . One factor can also be that people might not want to Open Source there java projects or PHP ones.Its a highly competitive market and sure we can't blame them.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Next up we have C, C++ , Perl and Objective-C. It was obvious because C and C++ are tougher to learn compared to languages such as python, Ruby or JavaScript.Objective-C in the list shows that iOS developers are also contributing to Open Source projects at Github.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This data might not be accurate to the developers language choice and Projects, but surely gives us a view of what current trend is.</div><div style="text-align: justify;"><br /></div></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hack of the Week: Octogit]]></title>
+    <link href="http://gotchacode.github.io/2012/09/hack-of-week-octopress.html"/>
+    <updated>2012-09-01T12:21:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/09/hack-of-week-octopress</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Every weekend I will be showcasing some awesome projects that will be termed as Hack of the Week.<br />This week "Hack of the Week " is <a href="http://myusuf3.github.com/octogit/" target="_blank">Octogit</a>. Its a Python project that gives a command line interface to connect to Github and it lets you hack on your project without opening the Github web interface.<br /><br /><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: right; margin-left: 1em; text-align: right;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-mh-84NV1-F0/UEH8aL2JCTI/AAAAAAAAA1U/L4dJQ25wHoU/s1600/screen4.png" imageanchor="1" style="clear: right; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" height="179" src="http://4.bp.blogspot.com/-mh-84NV1-F0/UEH8aL2JCTI/AAAAAAAAA1U/L4dJQ25wHoU/s320/screen4.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Octogit in Action</td></tr></tbody></table>Its an incredibly useful tool in your arsenal, why? Because all you need to do now is to login using your Github username and password and then you can create your Repository, Sort our issues, Open them, Close them. Does everything you always wanted to do without leaving your&nbsp;faithful&nbsp;terminal. While it might now appeal to Windows Developers as much but for OS X and Linux/BSD users it is a boon if you are using Github to deploy your code.<br /><br /><br /><u>What it does very well</u>: Gives a damn easy way to work with our favorite &nbsp;Github in command line mode.<br /><br /><u>What it could also have</u>: It would be pretty awesome if it could somehow allow to post Gist ( a popular Github pastebin service) along with other features it have. Though it is possible to achieve it using some Vim and Emacs plugins.<br /><br />You can connect with the Hacker here: <a href="http://mahdiyusuf.com/" target="_blank">Mahdi yusuf</a><br /><br />Installing it is simple:<br />Just type in your terminal: &nbsp;<span style="font-family: 'Courier New', Courier, monospace;">pip install octogit.</span><br /><span style="font-family: 'Courier New', Courier, monospace;"><br /></span><span style="font-family: 'Courier New', Courier, monospace;"><br /></span><span style="font-family: 'Courier New', Courier, monospace;"><br /></span><span style="font-family: Verdana, sans-serif;"><br /></span><span style="font-family: 'Courier New', Courier, monospace;"><br /></span></div>
+</div>
+
+
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/01717981578217536535">
+  <div class="css-comment-name js-comment-name">
+    qsy
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-09-01T13:38:49.792Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Should be octogit, not Octopress, which is a different project altogether.
+  </div>
+  <br/>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

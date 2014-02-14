@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Articles | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/articles/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[One More Post]]></title>
+    <link href="http://gotchacode.github.io/blog/2013/12/29/One-More-Post/"/>
+    <updated>2013-12-29T00:00:00+05:30</updated>
+    <id>http://gotchacode.github.io/blog/2013/12/29/One-More-Post</id>
+    <content type="html"><![CDATA[<p>This is another demo post, that shows the sidebar navigation features of
+this clean and simple theme. It is very easy for you to use it, just
+fork the repository and use it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Demo Post]]></title>
+    <link href="http://gotchacode.github.io/blog/2013/07/02/demo-post/"/>
+    <updated>2013-07-02T00:00:00+05:30</updated>
+    <id>http://gotchacode.github.io/blog/2013/07/02/demo-post</id>
+    <content type="html"><![CDATA[<p>This is a demo post for showing the jekyll theme. Jekyll lets you write
+your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
+
+<p>This theme includes sweet Github syntax highlighting.</p>
+
+<p>For JavaScript:</p>
+
+<p><code>js
+var db = new Ldb();
+db.set('key', Object);
+</code>
+For Python:</p>
+
+<p>```py</p>
+
+<h1>! /usr/bin/env python</h1>
+
+<p>import time
+import optparse
+from linkfetcher import Linkfetcher
+from webcrawler import Webcrawler</p>
+
+<p>Usage = &lsquo;&rsquo;&lsquo;
+ $ ./crawler -d5 <url></p>
+
+<pre><code>Here in this case it goes till depth of 5 and url is target URL to
+start crawling.
+</code></pre>
+
+<p>&lsquo;&rsquo;&lsquo;
+Version = '0.0.1&rsquo;</p>
+
+<p>def option_parser():</p>
+
+<pre><code>parser = optparse.OptionParser(usage=Usage, version=Version)
+
+parser.add_option("-l", "--links", action="store_true",
+    default=False,dest="links", help="Get links for target url only")
+
+parser.add_option("-d", "--depth", action="store", type="int" ,
+    default=30, dest="depth", help="Maximum depth to traverse")
+opts, args = parser.parse_args()
+
+if len(args) &lt; 1:
+    parser.print_help()
+    raise SystemExit, 1
+
+return opts, args
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

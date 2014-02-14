@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Google | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/google/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google+ Communities, a Great Start?]]></title>
+    <link href="http://gotchacode.github.io/2012/12/google-communities-great-start.html"/>
+    <updated>2012-12-20T18:32:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/12/google-communities-great-start</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Google+ recently added much needed communities &nbsp;feature to it. Well lets see, how good it is?<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-L2gM8QIjbdU/UNNY2rRk9wI/AAAAAAAAA5o/fQdERqeva2Q/s1600/googlelplus.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="179" src="http://1.bp.blogspot.com/-L2gM8QIjbdU/UNNY2rRk9wI/AAAAAAAAA5o/fQdERqeva2Q/s320/googlelplus.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"></div><br /><br />First of all, it looks very clean and organized. Though Google+ appeared late on social networking scene but they are doing it pretty nicely. While it may not be biggest social network of the planet, but if you are looking for sensible and informative discussions it is the place you should be.<br /><br />Also, if you are a developer/programmer it is a very helpful to get help from fellow geeks in these communities. Also spam is almost negligible as mostly sensible(fewer in number) use it. You can view it as an excellent replacement to the Stackoverflow which might be little harsh on the newbies.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-nYj_vg8KRQI/UNNZP2OBouI/AAAAAAAAA5w/PK66_gA0_CQ/s1600/googlelplus1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="148" src="http://3.bp.blogspot.com/-nYj_vg8KRQI/UNNZP2OBouI/AAAAAAAAA5w/PK66_gA0_CQ/s320/googlelplus1.png" width="320" /></a></div><br /><br />So i would suggest to join the communities which matches your interest. It would definitely give a great opportunity to connect, discuss&nbsp;interesting&nbsp;ideas and share knowledge.<br /><br /><br /></div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tips for Optimizing Chrome Extension]]></title>
+    <link href="http://gotchacode.github.io/2012/12/tips-for-optimizing-chrome-extension.html"/>
+    <updated>2012-12-19T07:57:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/12/tips-for-optimizing-chrome-extension</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Here are some tips for optimizing Google Chrome Extensions:<br /><br />One should check these things at first,<br /><br />Open the Chrome task manager and check CPU and RAM usage for your extension. Also check how this value changes for your extensions after full day of Chrome run. If RAM usage &gt; 15mb it must be a serious reason not to release it without optimizations. Also if CPU value above zero on a persistence basis is bad sign too.<br /><br />Also closure compiler can help your code execute faster. &nbsp;If your have identified that the execution of code is more of an issue than the potential of&nbsp;maximizing&nbsp;the speed of your end points. Also if you are dealing with facebook API , working through bulks calls to Facebook and catching that locally seems to improve performance. Another important thing to note is that if you are concerned with speed or delay tour user experiences, then UI design is a great place to start. The&nbsp;perceived speed of an application can be significantly altered just be settings expectations&nbsp;appropriately, with regard to the speed with which a particular process will execute. So tell users it will take 10 secs when it takes 8 secs.<br /><br />This post is based on a question i asked on Chrome Extension group, you can check out the thread <a href="https://groups.google.com/a/chromium.org/d/topic/chromium-extensions/jNNksFBpa3A/discussion" target="_blank">here</a>. Since these tips are quite handy i thought of sharing them in here in form of a blog post. Hope this helps!<br /><br /><br /></div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

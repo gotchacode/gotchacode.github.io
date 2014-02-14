@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Get WiFi Working in Fedora/Ubuntu - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Hello everyone! Most of you must have faced some problems regarding your wireless drivers and it might not be working properly or working at all. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://gotchacode.github.io/2011/12/how-to-get-wifi-working-in-fedoraubuntu.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:gotchacode.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Get WiFi Working in Fedora/Ubuntu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+<time datetime="2011-12-01T11:22:00+05:30" pubdate data-updated="true">Dec 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class="css-full-post-content js-full-post-content">
+Hello everyone! Most of you must have faced some problems regarding your wireless drivers and it might not be working properly or working at all. Here is a quick guide how you can sort out this problem. The error must have been device not ready-firmware missing.<br/><br/>The guide is as follows: Download the drivers from this link <strong>http://downloads.openwrt.org/sources/broadcom-wl-4.150.10.5.tar.bz2.</strong><br/><br/>Now to need to extract the file.For that you need to go to directory where the file is downloaded. Open your terminal and type <strong>cd /home/username/Downloads</strong> and then type <strong>tar -xjf broadcom-wl-4.150.10.5.tar.bz2</strong>.When you type this command what it does is that all the content of the tarball gets extracted in the same directory the tarball is. Now get into Superuser shell because you will be needing full rights.For this you can type su &#8211; and followed by root passwd if you are using fedora and alikes. If using Ubuntu/mint/ type <strong>sudo -s</strong> and then followed by passwd. You will get into root shell and will get # instead of $. Now you need to change the directory to the extracted drivers. For this type <strong>cd /home/username/Downloads/broadcom-wl-4.150.10.5/driver/</strong> Finally you need to extract all the drivers to the relevant directory.For this type :<strong> #b43-fwcutter -w /lib/firmware wl_apsta_mimo.o</strong> Now restart your system and guess what you can use your wifi without any hitch.
+</div>
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://ubuntu.pici.nu/2011/12/07/how-to-get-wifi-working-in-fedoraubuntu-%c2%ab-a-guide-to-your-digital/">
+  <div class="css-comment-name js-comment-name">
+    How To Get WiFi working in Fedora/Ubuntu « A guide to your digital … | Pici&#39;s Ubuntu Blog
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2011-12-07T19:52:32.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    [&#8230;] the original post: How To Get WiFi working in Fedora/Ubuntu « A guide to your digital …   This entry was posted in all, and, DE, Drive, drivers, ever, GUI, guide, here, how, in, is, it, [&#8230;]
+  </div>
+  <br/>
+</div>
+</div></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">{"name"=>"Vinit Kumar", "url"=>"https://plus.google.com/106645023605660581419?rel=author", "image"=>"//lh3.googleusercontent.com/-eC-n0AzrUyg/AAAAAAAAAAI/AAAAAAAACaw/fYGPSsG3y70/s512-c/photo.jpg"}</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+<time datetime="2012-08-30T13:13:21+05:30" class="updated">Updated Aug 30<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/latest/'>latest</a>, <a class='category' href='/blog/categories/operating-systems/'>operating systems</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://gotchacode.github.io/2011/12/how-to-get-wifi-working-in-fedoraubuntu.html" data-via="" data-counturl="http://gotchacode.github.io/2011/12/how-to-get-wifi-working-in-fedoraubuntu.html" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/12/how-to-configure-mutt-in-linux.html" title="Previous Post: How To Configure Mutt in Linux">&laquo; How To Configure Mutt in Linux</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/12/google-gets-new-look-and-cool-features.html" title="Next Post: Google+ Gets New Look and Cool Features.">Google+ Gets New Look and Cool Features. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/13/migrating-to-octopress/">Migrating to Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/01/music-movies-and-life.html">Music, Movies and Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/01/happy-new-year-2014.html">Happy New Year 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/29/One-More-Post/">One More Post</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/using-html5-localstorage-into-your-app.html">Using HTML5 localStorage Into Your App, Check ldb.js</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

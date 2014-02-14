@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Operating Systems | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/operating-systems/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get WiFi Working in Fedora/Ubuntu]]></title>
+    <link href="http://gotchacode.github.io/2011/12/how-to-get-wifi-working-in-fedoraubuntu.html"/>
+    <updated>2011-12-01T11:22:00+05:30</updated>
+    <id>http://gotchacode.github.io/2011/12/how-to-get-wifi-working-in-fedoraubuntu</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+Hello everyone! Most of you must have faced some problems regarding your wireless drivers and it might not be working properly or working at all. Here is a quick guide how you can sort out this problem. The error must have been device not ready-firmware missing.<br/><br/>The guide is as follows: Download the drivers from this link <strong>http://downloads.openwrt.org/sources/broadcom-wl-4.150.10.5.tar.bz2.</strong><br/><br/>Now to need to extract the file.For that you need to go to directory where the file is downloaded. Open your terminal and type <strong>cd /home/username/Downloads</strong> and then type <strong>tar -xjf broadcom-wl-4.150.10.5.tar.bz2</strong>.When you type this command what it does is that all the content of the tarball gets extracted in the same directory the tarball is. Now get into Superuser shell because you will be needing full rights.For this you can type su -- and followed by root passwd if you are using fedora and alikes. If using Ubuntu/mint/ type <strong>sudo -s</strong> and then followed by passwd. You will get into root shell and will get # instead of $. Now you need to change the directory to the extracted drivers. For this type <strong>cd /home/username/Downloads/broadcom-wl-4.150.10.5/driver/</strong> Finally you need to extract all the drivers to the relevant directory.For this type :<strong> #b43-fwcutter -w /lib/firmware wl_apsta_mimo.o</strong> Now restart your system and guess what you can use your wifi without any hitch.
+</div>
+
+
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://ubuntu.pici.nu/2011/12/07/how-to-get-wifi-working-in-fedoraubuntu-%c2%ab-a-guide-to-your-digital/">
+  <div class="css-comment-name js-comment-name">
+    How To Get WiFi working in Fedora/Ubuntu « A guide to your digital … | Pici&#39;s Ubuntu Blog
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2011-12-07T19:52:32.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    [...] the original post: How To Get WiFi working in Fedora/Ubuntu « A guide to your digital …   This entry was posted in all, and, DE, Drive, drivers, ever, GUI, guide, here, how, in, is, it, [...]
+  </div>
+  <br/>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Setup a Web-Server in fedora/Ubuntu]]></title>
+    <link href="http://gotchacode.github.io/2011/12/how-to-setup-web-server-in-fedoraubuntu.html"/>
+    <updated>2011-12-01T11:13:00+05:30</updated>
+    <id>http://gotchacode.github.io/2011/12/how-to-setup-web-server-in-fedoraubuntu</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+This is the first self-help guide to configure your web server in an Ubuntu/fedora. Only the very basic and initial server config will be dealt in this post.Subsequent post will have the advanced stuffs.<br/><br/>First inorder to configure your system to act as a web-server, the best and most favourable thing u can do is that you install the server installation repos initially.If you are installing fedora from a dvd, they give you four options and you should select the server option.So that your OS is already optimized to be a server.And don’t worry it will be having all the stuff you need in a graphical desktop.<br/><br/>Here are the steps you need to follow once you are connected to an internet connection with decent speed.<br/><br/>Any server in Linux is based on LAMP.<br/><br/>Its works as good as any xampp server you have used in Windows.Though you need to have some basic understanding of permissions in Linux.<br/><br/>To install MySQL5, you need to do this:<br/>yum install mysql mysql-server<br/><br/>Then we create the system startup links for MySQL (so that MySQL starts automatically whenever the system boots) and start the MySQL server:<br/><br/>chkconfig --levels 235 mysqld on<br/><br/><br/>/etc/init.d/mysqld start<br/>Run<br/>mysql_secure_installation<br/>to set a password for the user root (otherwise anybody can access your MySQL database!):<br/>[root@server1~]# mysql_secure_installation<br/><br/><br/><br/><br/><br/><br/>NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL<br/><br/>SERVERS IN PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!<br/><br/><br/><br/><br/><br/>In order to log into MySQL to secure it, we'll need the current<br/><br/>password for the root user. If you've just installed MySQL, and<br/><br/>you haven't set the root password yet, the password will be blank,<br/><br/>so you should just press enter here.<br/><br/>Enter current password for root (enter for none): &lt;-- ENTER<br/><br/>OK, successfully used password, moving on...<br/><br/><br/><br/>Setting the root password ensures that nobody can log into the MySQL<br/><br/>root user without the proper authorisation.<br/><br/><br/>Set root password? [Y/n] &lt;-- ENTER<br/><br/>New password: &lt;-- yourrootsqlpassword<br/><br/>Re-enter new password: &lt;-- yourrootsqlpassword<br/><br/>Password updated successfully!<br/><br/>Reloading privilege tables..<br/><br/>... Success!<br/><br/><br/><br/><br/><br/>By default, a MySQL installation has an anonymous user, allowing anyone<br/><br/><br/>to log into MySQL without having to have a user account created for<br/><br/>them. This is intended only for testing, and to make the installation<br/><br/>go a bit smoother. You should remove them before moving into a<br/><br/>production environment.<br/><br/>Remove anonymous users? [Y/n] &lt;-- ENTER<br/><br/>... Success!<br/><br/><br/><br/>Normally, root should only be allowed to connect from 'localhost'. This<br/><br/>ensures that someone cannot guess at the root password from the network.<br/><br/><br/>Disallow root login remotely? [Y/n] &lt;-- ENTER<br/><br/>... Success!<br/><br/><br/><br/>By default, MySQL comes with a database named 'test' that anyone can<br/><br/><br/>access. This is also intended only for testing, and should be removed<br/><br/>before moving into a production environment.<br/><br/><br/>Remove test database and access to it? [Y/n] &lt;-- ENTER<br/><br/>- Dropping test database...<br/><br/>... Success!<br/><br/><br/>- Removing privileges on test database...<br/><br/>... Success!<br/><br/><br/>This is the first self-help guide to configure your web server in an Ubuntu/fedora. Only the very basic and initial server config will be dealt in this post.Subsequent post will have the advanced stuffs.<br/><br/>First inorder to configure your system to act as a web-server, the best and most favourable thing u can do is that you install the server installation repos initially.If you are installing fedora from a dvd, they give you four options and you should select the server option.So that your OS is already optimized to be a server.And don’t worry it will be having all the stuff you need in a graphical desktop.<br/><br/>Here are the steps you need to follow once you are connected to an internet connection with decent speed.<br/><br/>Any server in Linux is based on LAMP.<br/><br/>Its works as good as any xampp server you have used in Windows.Though you need to have some basic understanding of permissions in Linux.<br/><br/>To install MySQL5, you need to do this:<br/>yum install mysql mysql-server<br/><br/>Then we create the system startup links for MySQL (so that MySQL starts automatically whenever the system boots) and start the MySQL server:<br/><br/>chkconfig --levels 235 mysqld on<br/><br/><br/>/etc/init.d/mysqld start<br/>Run<br/>mysql_secure_installation<br/>to set a password for the user root (otherwise anybody can access your MySQL database!):<br/>[root@server1~]# mysql_secure_installation<br/><br/><br/><br/><br/><br/><br/>NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL<br/><br/>SERVERS IN PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!<br/><br/><br/><br/><br/><br/>In order to log into MySQL to secure it, we'll need the current<br/><br/>password for the root user. If you've just installed MySQL, and<br/><br/>you haven't set the root password yet, the password will be blank,<br/><br/>so you should just press enter here.<br/><br/>Enter current password for root (enter for none): &lt;-- ENTER<br/><br/>OK, successfully used password, moving on...<br/><br/><br/><br/>Setting the root password ensures that nobody can log into the MySQL<br/><br/>root user without the proper authorisation.<br/><br/><br/>Set root password? [Y/n] &lt;-- ENTER<br/><br/>New password: &lt;-- yourrootsqlpassword<br/><br/>Re-enter new password: &lt;-- yourrootsqlpassword<br/><br/>Password updated successfully!<br/><br/>Reloading privilege tables..<br/><br/>... Success!<br/><br/><br/><br/><br/><br/>By default, a MySQL installation has an anonymous user, allowing anyone<br/><br/><br/>to log into MySQL without having to have a user account created for<br/><br/>them. This is intended only for testing, and to make the installation<br/><br/>go a bit smoother. You should remove them before moving into a<br/><br/>production environment.<br/><br/>Remove anonymous users? [Y/n] &lt;-- ENTER<br/><br/>... Success!<br/><br/><br/><br/>Normally, root should only be allowed to connect from 'localhost'. This<br/><br/>ensures that someone cannot guess at the root password from the network.<br/><br/><br/>Disallow root login remotely? [Y/n] &lt;-- ENTER<br/><br/>... Success!<br/><br/><br/><br/>By default, MySQL comes with a database named 'test' that anyone can<br/><br/><br/>access. This is also intended only for testing, and should be removed<br/><br/>before moving into a production environment.<br/><br/><br/>Remove test database and access to it? [Y/n] &lt;-- ENTER<br/><br/>- Dropping test database...<br/><br/>... Success!<br/><br/><br/><br/>Reloading the privilege tables will ensure that all changes made so far<br/><br/>will take effect immediately.<br/><br/><br/><br/>Reload privilege tables now? [Y/n] &lt;-- ENTER<br/><br/>... Success!<br/><br/><br/>Cleaning up...<br/><br/><br/><br/><br/><br/>All done! If you've completed all of the above steps, your MySQL<br/><br/>installation should now be secure.<br/><br/>Thanks for using MySQL!<br/><br/>[root@server1~]#<br/><br/>Since you have installed the server edition,Apacche will be installed by default,if not install using following commands.( Yum install httpd or Sudo apt-get install httpd)<br/>Also u need to add install apache too.To do so you need to type these in terminal<br/><br/>yum install httpd<br/><br/>then if u want your system to start this service at startup you need to type this.<br/><br/>chkconfig --levels 235 httpd on<br/><br/>and you can start apache by<br/><br/>service httpd start or /etc/init.d/httpd start<br/><br/>To install PHP5 you need to type<br/><br/>yum install php<br/><br/>and then restart the server by service httpd restart<br/><br/>To get Mysql support in PHP5 you need to type<br/><br/>yum search php and then<br/><br/>yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-eaccelerator php-magickwand php-magpierss php-mbstring php-mcrypt php-mssql php-shout php-snmp php-soap php-tid<br/><br/>And then again restart the apache2.<br/><br/>Now to install PHPMyadmin<br/><br/>You need to use these commands<br/><br/>yum install phpmyadmin and then we need to configure phpmyadmin to accept connections from other than localhost for that you can<br/><br/>use either vi /etc/httpd/conf.d/phpMyAdmin.conf or gedit /etc/httpd/conf.d/phpMyAdmin.conf or nano etc/httpd/conf.d/phpMyAdmin.conf<br/><br/>Now all u need to do is to comment out out the  stanza):<br/><br/>Once you are done with this you are good to go.Now go into terminal,Login as root and type init 6 so as to restart your computer so as changes takes effect<br/><br/>and then you do the following steps.<br/><br/>Check out whether the apache and mysql are running or not by typing<br/><br/>service httpd status and service mysql status.<br/><br/>If the are running go to your browser and type localhost /<a href="http://127.0.0.1/">127.0.0.1</a><br/><br/>you would see you server running as u can get a apache page.<br/><br/>Now you can put your site files or wordpress/joomla/drupal cms in /etc/html/www<br/><br/>and follow the installation steps.<br/><br/>Note: you need to be root to do most of the steps. ubuntu user can replace yum with sudo apt-get in all these commands.<br/><br/>Once you have experience in all these stuffs you can install using a single line.But here this is elaborated and detailed so that you may understand the components you have installed.<br/><br/>Any problems if any can be posted .
+</div>
+
+
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://mytechsearch.wordpress.com/2012/02/02/installing-wordpress-cms-on-your-server/">
+  <div class="css-comment-name js-comment-name">
+    Installing wordpress CMS on your server | Mytechsearch
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-02T03:07:35.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    [...] How To Setup A Web-Server in fedora/Ubuntu (gotchacode.wordpress.com) [...]
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://mytechsearch.tk/?p=54">
+  <div class="css-comment-name js-comment-name">
+    Installing wordpress CMS on your server | mytechsearch
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2012-02-02T03:10:59.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    [...] How To Setup A Web-Server in fedora/Ubuntu (gotchacode.wordpress.com) [...]
+  </div>
+  <br/>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fedora-13″Goddard”, Simply Amazing]]></title>
+    <link href="http://gotchacode.github.io/2010/10/fedora-13goddard-simply-amazing.html"/>
+    <updated>2010-10-20T04:03:00+05:30</updated>
+    <id>http://gotchacode.github.io/2010/10/fedora-13goddard-simply-amazing</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<a href="http://gotchacode.files.wordpress.com/2010/10/fedora.png"><img class="alignleft size-full wp-image-391" title="fedora desktop" src="http://gotchacode.files.wordpress.com/2010/10/fedora.png" alt="" width="500" height="375" /></a><br/><br/>Finally after so much delay stable  fedora 13 distro was released on may 26'2010.Every fedora fan was waiting eagerly for it and sure it doesn't dissapoint them.Out of the distros releases so far in 2010, Fedora 13's release notes and list of features. These new list of features make fedora unpralleled and simply unavoidable.The following list includes some highlights:<br/><br/>- <em>Automatic printer driver installation: Pretty self explanatory. Enhanced support for printers in general. Automatic installation of drivers on demand when a given printer requires them to function correctly.</em><br/><br/><em>- Better webcam support: An effort was put in place to provide better support for webcams in general, specially focusing on dual mode models.</em><br/><br/><em>- Rebase to the latest KDE4.4.X SC.</em><br/><br/><em>- NetworkManager enhancements: GUI included, as well as enhanced support for several pieces of hardware and functionality.</em><br/><br/><em>- Enhanced support for both Raddeon and Nvidia video cards.<a href="http://gotchacode.files.wordpress.com/2010/10/500px-f13-spin-security.png"><img class="alignright size-full wp-image-392" title="500px-F13-spin-security" src="http://gotchacode.files.wordpress.com/2010/10/500px-f13-spin-security.png" alt="" width="500" height="377" /></a></em><br/><br/><em>-Color management to calibrate monitors and scanners</em><br/><br/><em>- Parallel support for Python 2.x and 3.x.</em><br/><br/><em>-SSSD authentication for users.</em><br/><br/><em>-Zarafa Open Source edition, a new open-source groupware suite.</em><br/><br/><em>-System rollback for the Btrfs file system.</em><br/><br/><em>-Better System Tap probes.</em><br/><br/><em>-Support for the entire Java EE 6 spec in Netbeans 6.8.</em><br/><br/><em>-Automatic language pack installation.</em><br/><br/>&nbsp;<br/><br/>&nbsp;<br/><br/><em><strong>TO DOWNLOAD THE FEDORA13 DVD/CD ISO OR THROUGH BIT TORRENT: http://www.cyberciti.biz/tips/fedora-13-download-cd-dvd-iso.html#dl</strong></em><br/><br/>&nbsp;
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MusiX – the Multimedia OS]]></title>
+    <link href="http://gotchacode.github.io/2010/10/musix-multimedia-os.html"/>
+    <updated>2010-10-19T09:16:00+05:30</updated>
+    <id>http://gotchacode.github.io/2010/10/musix-multimedia-os</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<p><a href="http://gotchacode.files.wordpress.com/2010/10/musix1_0-welcome-screen.jpg"><img class="aligncenter size-full wp-image-383" title="MusiX welcome screen" src="http://gotchacode.files.wordpress.com/2010/10/musix1_0-welcome-screen.jpg" alt="" width="510" height="381" /></a><a href="http://gotchacode.files.wordpress.com/2010/10/graphic-desktop-inkscape.jpg"></a></p><br/><p>Its a&nbsp; free operating system intended for music production, graphic design, audio and video edition and alll other tasks you like.The creator of this unix based distro claims to replace windows by giving free , redistributable and great working softwares.</p><br/><p>This new release includes the Linux Kernel 2.6.21. The documentation was updated and many important applications were upgraded (among those: Ardour 2.0.0.2, Rosegarden 1.5.1 and the Musix's Control Panel). Some new programs were also installed (MScore, Nekobee and more). Many bugs were corrected and some new functionality are added.</p><br/><p>The graphical artwork in the user interface and the functionality were improved: now it is really easy to change colour themes. <a title="http://www.flickr.com/photos/marcospcmusica/519335874/" rel="nofollow" href="http://www.flickr.com/photos/marcospcmusica/519335874/">KDE<br/>and GNOME applications look almost identical</a> using the same colour palette and icon theme (crystalsvg). Now applications like The GIMP (GTK2) and Rosegarden (KDE) appear user-friendlier</p><br/><p><a href="http://gotchacode.files.wordpress.com/2010/10/graphic-desktop-inkscape.jpg"><img title="graphic-desktop-inkscape" src="http://gotchacode.files.wordpress.com/2010/10/graphic-desktop-inkscape.jpg" alt="" width="408" height="306" /></a></p><br/><p>Software featured in Musix 1.0 R2 includes: Ardour 0.99.3 &amp; Ardour 2.0.0.2 (audio sequencer), Rosegarden 1.5.1 (audio/midi sequencer), Cinelerra (video edition), Bluefish (web design), The GIMP (image manipulation), Inkscape (vectorial graphic design), Blender3D (3D rendering and animation), Musix Control and more.</p><br/><p>you can download it from the link free of cost @<a href="http://www.musix.org.ar/en/download.html">http://www.musix.org.ar/en/download.html</a></p><br/><p>&nbsp;</p>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

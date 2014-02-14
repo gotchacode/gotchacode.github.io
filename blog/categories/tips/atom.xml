@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tips | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/tips/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Talks and Videos That Could Make You a Better Developer]]></title>
+    <link href="http://gotchacode.github.io/2013/06/talks-and-videos-that-could-make-you.html"/>
+    <updated>2013-06-01T19:17:00+05:30</updated>
+    <id>http://gotchacode.github.io/2013/06/talks-and-videos-that-could-make-you</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">Hey fellas, sorry for not actively blogging these months. But, I have some interesting stuff for you guys.<br /><br />Development is a complex process and it requires a lot of skill,&nbsp;hard work&nbsp;and techniques to be a really good developer. Recently, I &nbsp;came across a lot of good stuff and things are improving for me quite positively. I wanted to share the same with you.<br /><br />These are mostly talks, videos or presentation by some really popular, successful people from our industry. The tips they give are mostly an eye opener. Hope you enjoy them.<br /><br /><script async="" class="speakerdeck-embed" data-id="505376778282a900020560da" data-ratio="1.33333333333333" src="http://gotchacode.github.io//speakerdeck.com/assets/embed.js"></script> Also, here is another great presentation by the same guy.  <script async class="speakerdeck-embed" data-id="d3f56f007adf01307e7722000a9f0395" data-ratio="1.77777777777778" src="http://gotchacode.github.io//speakerdeck.com/assets/embed.js"></script><br /><br />The next talk is by Heroku co-founder Adam. This is single most awesome talk i have seen in recent times and is a must watch.<br /><br />&nbsp;   <iframe allowfullscreen="" frameborder="0" height="300" mozallowfullscreen="" src="http://player.vimeo.com/video/49701839" webkitallowfullscreen="" width="400"></iframe> I<br /><br />&nbsp;Hope you guys enjoy 'em and keep doing great work! </div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configure Sublime Text2 for JavaScript Development.]]></title>
+    <link href="http://gotchacode.github.io/2013/02/configure-sublime-text2-for-javascript.html"/>
+    <updated>2013-02-24T11:19:00+05:30</updated>
+    <id>http://gotchacode.github.io/2013/02/configure-sublime-text2-for-javascript</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">I recently started using Sublime Text2 full time at work after being a vim user for more than 4 years. Vim is really good but it takes sometime to configure it properly. Well this is not a Vim vs ST2 debate. It is more of a vim user shifting to ST2 Tip.<br /><br />The first thing that you should do is to install package control, it provide really good 3rd party plugins. You can check out the link how to install it.&nbsp;<a href="http://wbond.net/sublime_packages/package_control/installation" target="_blank">Install Package Control</a><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-VyTJ6GhccRQ/USn4XUWXanI/AAAAAAAABBU/JM261l4WaZw/s1600/Screen+Shot+2013-02-24+at+4.52.12+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="250" src="http://4.bp.blogspot.com/-VyTJ6GhccRQ/USn4XUWXanI/AAAAAAAABBU/JM261l4WaZw/s400/Screen+Shot+2013-02-24+at+4.52.12+PM.png" width="400" /></a></div><br /><br />Once done with that open package manager and install these useful plugins<br /><br /><ul style="text-align: left;"><li>JSHint.</li><li>JSLint.</li><li>DocBlockr.</li><li>AngularJS.</li><li>Mocha &amp; Mocha snippet&nbsp;</li><li>NodeJS.</li><li>Live Reload.</li><li>AMD Module Editor</li><li>Backbone.js</li><li>Pretty JSON</li><li>Require Node.js Module Helper</li></ul><div><br /></div><div>Among, these plugins mocha is the test runner and mocha snippets provides you will snippets to write the tests very fast. Also, there is good plugin for vim mode in Sublime Text2, you can use that if you don't want to waste the muscle memory.&nbsp;I highly recommend the real time linting with JSHint. It will make you so much more&nbsp;productive and improve your code as well. It acts as the first unit test against the code you just wrote.&nbsp;</div><div><br /></div><div>One more important thing, you could set the indentation with tab width equals to 2 spaces. It is a very sane default while writing JavaScript code.</div><div><br /></div><div>What really struck me was that Sublime Text enabled me to do almost everything i did with Vim without going into the pain of configuration. Also, the learning curve is not at all steep so i could get productive real fast.</div></div>
+</div>
+
+
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/16586618300856804621">
+  <div class="css-comment-name js-comment-name">
+    Unknown
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2013-02-24T16:08:16.461Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    2013 Wishes: Sublime Text Terminal
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/16586618300856804621">
+  <div class="css-comment-name js-comment-name">
+    Unknown
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2013-02-24T16:08:56.069Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    2013 Wishes: Sublime Text Terminal
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/17194318708068141006">
+  <div class="css-comment-name js-comment-name">
+    Frank
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2013-02-26T22:14:30.778Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    How do you debug javascript using the chrome debugger
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/00121175657676051962">
+  <div class="css-comment-name js-comment-name">
+    Joel
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2013-06-30T01:57:24.119Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Which mocha plugin are you referring to, the runner? or the snippet package? I&#39;m assuming you mean the runner, but I wasn&#39;t sure at first...and in the interest of clarity for others who may also have this question, perhaps you could clarify?  My experience with the rest of the plugins was smooth, however.
+  </div>
+  <br/>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Coding | My Octopress Blog]]></title>
+  <link href="http://gotchacode.github.io/blog/categories/coding/atom.xml" rel="self"/>
+  <link href="http://gotchacode.github.io/"/>
+  <updated>2014-02-14T11:32:25+05:30</updated>
+  <id>http://gotchacode.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Three Beautiful Quicksorts]]></title>
+    <link href="http://gotchacode.github.io/2011/10/three-beautiful-quicksorts.html"/>
+    <updated>2011-10-30T04:01:00+05:30</updated>
+    <id>http://gotchacode.github.io/2011/10/three-beautiful-quicksorts</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<object height="350" width="425"><br/>      <param name="movie" value="http://www.youtube.com/v/aMnn0Jq0J-E&amp;feature=feedwll"><br/>      <param name="wmode" value="transparent"><br/>      <embed src="http://www.youtube.com/v/aMnn0Jq0J-E&amp;feature=feedwll;rel=0" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"><br/>      </object>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
