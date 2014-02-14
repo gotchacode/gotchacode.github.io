@@ -9,8 +9,7 @@
   <meta name="author" content="Vinit Kumar">
 
   
-  <meta name="description" content="This is a demo post for showing the jekyll theme. Jekyll lets you write
-your blog posts on markdown. Which also has a sweet syntax highlighting. This &hellip;">
+  <meta name="description" content="Hey fellas, sorry for not actively blogging these months. But, I have some interesting stuff for you guys.Development is a complex process and it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,119 +65,6 @@ your blog posts on markdown. Which also has a sweet syntax highlighting. This &h
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/02/demo-post/">Demo Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-02T00:00:00+05:30" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a demo post for showing the jekyll theme. Jekyll lets you write
-your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
-
-<p>This theme includes sweet Github syntax highlighting.</p>
-
-<p>For JavaScript:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Ldb</span><span class="p">();</span>
-</span><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="nb">Object</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For Python:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='py'><span class='line'><span class="c">#! /usr/bin/env python</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">optparse</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">linkfetcher</span> <span class="kn">import</span> <span class="n">Linkfetcher</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">webcrawler</span> <span class="kn">import</span> <span class="n">Webcrawler</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Usage</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="s"> $ ./crawler -d5 &lt;url&gt;</span>
-</span><span class='line'><span class="s">    Here in this case it goes till depth of 5 and url is target URL to</span>
-</span><span class='line'><span class="s">    start crawling.</span>
-</span><span class='line'><span class="s">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="n">Version</span> <span class="o">=</span> <span class="s">&#39;0.0.1&#39;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">option_parser</span><span class="p">():</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">parser</span> <span class="o">=</span> <span class="n">optparse</span><span class="o">.</span><span class="n">OptionParser</span><span class="p">(</span><span class="n">usage</span><span class="o">=</span><span class="n">Usage</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">Version</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;--links&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">&quot;store_true&quot;</span><span class="p">,</span>
-</span><span class='line'>        <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">dest</span><span class="o">=</span><span class="s">&quot;links&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&quot;Get links for target url only&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-d&quot;</span><span class="p">,</span> <span class="s">&quot;--depth&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">&quot;store&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">&quot;int&quot;</span> <span class="p">,</span>
-</span><span class='line'>        <span class="n">default</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;depth&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&quot;Maximum depth to traverse&quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">opts</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">parser</span><span class="o">.</span><span class="n">print_help</span><span class="p">()</span>
-</span><span class='line'>        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">,</span> <span class="mi">1</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="n">opts</span><span class="p">,</span> <span class="n">args</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -597,6 +483,45 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/12/what-are-some-good-javascript-libraries.html">What Are Some Good JavaScript Libraries to Learn?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+<time datetime="2012-12-20T19:18:00+05:30" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">I asked this question on <a href="http://www.quora.com/JavaScript/What-are-some-awesome-JS-libraries-any-developer-should-be-aware-of?__snids__=67108875&amp;__nsrc__=1" target="_blank">Quora</a> and got some interesting answers. Here i will be writing it in form of a blog post.<br /><br />There are tons of JS Libraries, since JavaScript is one of hottest&nbsp;languages and a lot of developers work on it to develop rich client side as well as server side (NodeJS based) . So if your looking forward to use a MVC framework <a href="http://addyosmani.github.com/todomvc/" target="_blank">TodoMVC</a>&nbsp;is a great place to start with. Next for more&nbsp;specialized&nbsp;ones, you can check <a href="http://jster.net/">http://jster.net</a> or&nbsp;<a href="http://devrates.com/project/list?query=%5Bjavascript%5D" target="_blank">devrates.com</a>.<br />Here are some good&nbsp;frameworks one should be familiar with such as AngularJS,&nbsp;BackBone JS, Mocha,&nbsp;Prototype JS.<br /><br />Well, the key is get familiar with JavaScript, and learn/use these libraries that interests you most. Also going through the source code of these libraries is a very enlightening experience.<br /><br />With that said, May the force be with you!<br /><br /><br /><br /></div>
+</div></div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -626,11 +551,11 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/12/29/One-More-Post/">One More Post</a>
+        <a href="/2013/12/using-html5-localstorage-into-your-app.html">Using HTML5 localStorage Into Your App, Check ldb.js</a>
       </li>
     
       <li class="post">
-        <a href="/2013/12/using-html5-localstorage-into-your-app.html">Using HTML5 localStorage Into Your App, Check ldb.js</a>
+        <a href="/2013/12/how-to-focus-and-learn-one-thing.html">How to Focus and Learn One Thing Perfectly?</a>
       </li>
     
   </ul>

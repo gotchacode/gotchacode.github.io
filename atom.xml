@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.github.io/atom.xml" rel="self"/>
   <link href="http://gotchacode.github.io/"/>
-  <updated>2014-02-14T12:06:11+05:30</updated>
+  <updated>2014-02-14T12:17:48+05:30</updated>
   <id>http://gotchacode.github.io/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -51,17 +51,6 @@ I am listing some of them here:</p>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">A very happy new year to all the readers of this blog. To start with, I would try to publish a post at least once a week so that it may satisfy your appetite on a regular basis. Also, I am meditating about something new on this blog. It will be revealed when the time comes. With that said, have an amazing start to the year.</div>
 </div>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[One More Post]]></title>
-    <link href="http://gotchacode.github.io/blog/2013/12/29/One-More-Post/"/>
-    <updated>2013-12-29T00:00:00+05:30</updated>
-    <id>http://gotchacode.github.io/blog/2013/12/29/One-More-Post</id>
-    <content type="html"><![CDATA[<p>This is another demo post, that shows the sidebar navigation features of
-this clean and simple theme. It is very easy for you to use it, just
-fork the repository and use it.</p>
-]]></content>
   </entry>
   
   <entry>
@@ -381,6 +370,16 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
     <id>http://gotchacode.github.io/2012/12/how-to-setup-ideal-front-end</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Starting with Front-End Development and looking for a robust setup?<br /><br />Install Ubuntu 12.04 and&nbsp;here are some of the tools and tips that could come handy if you are configuring it for the first time. I am not detailing on how to install these tools but rather would suggest on what could be good setup for&nbsp;development..<br /><b><br /></b><b>IDE</b>: This is where you spend most of the time. So choose wisely among Sublime Text2, Vim or Emacs. Vim and Emacs are entirely customizable and comes with loads of plugin that would really improve your&nbsp;efficiency. Sublime text is an awesome code editor and you must try it first as it is highly effective and has a lower learning curve. Also there are loads of good plugins available that makes it a handy tool.<br /><div style="text-align: left;"><br /><b>Servers</b>: Install&nbsp;Apache 2,&nbsp;nginx and Node. This would cover most of the modern web server stack. Though node is technically not a server. But I hope you get my point.</div><div style="text-align: left;">Once Node and npm are installed there are some indispensable packages you must use. <b><i>UglifyJS </i></b>among others is a pretty handy one.&nbsp;Install<b><i> Compass </i></b>and <b><i>CoffeeScript</i></b>, also setup up <b><i>jslint/jshint</i></b> with your IDE. It will ensure a habit of shipping out quality code.<br /><br /><b>Browser<i>: Use the latest and nightly builds of Chromium/&nbsp;Firefox</i></b>, you should work with latest once so not miss any good feature/ improvements.</div><ul style="text-align: left;"><li>Install the <i style="font-weight: bold;">latest production release of Ruby, Python and Java, PHP </i>or whatever is your choice of language.&nbsp;</li><li>Learn<b><i> Version control </i></b>such as <b>git</b> and invest some time to learn it. It would save you tonnes of time later.</li><li>Last but not the least use<a href="http://www.blogger.com/%C2%A0http://yeoman.io/" target="_blank">&nbsp;yeoman</a>&nbsp;. It is really gem of a tool, it , it gives a robust set of tools , libraries and a workflow that most of top developers use. Invest sometime in learning and using it and you will be always glad that you did.&nbsp;</li></ul><br /><div style="text-align: left;"><br /></div><div style="text-align: left;">Installing each one them on Ubuntu 12.04 is easy and obviously it is free and freakishly stable. Configure once and worry about the important aspects of&nbsp;development.</div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div></div>
+</div>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Are Some Good JavaScript Libraries to Learn?]]></title>
+    <link href="http://gotchacode.github.io/2012/12/what-are-some-good-javascript-libraries.html"/>
+    <updated>2012-12-20T19:18:00+05:30</updated>
+    <id>http://gotchacode.github.io/2012/12/what-are-some-good-javascript-libraries</id>
+    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">I asked this question on <a href="http://www.quora.com/JavaScript/What-are-some-awesome-JS-libraries-any-developer-should-be-aware-of?__snids__=67108875&amp;__nsrc__=1" target="_blank">Quora</a> and got some interesting answers. Here i will be writing it in form of a blog post.<br /><br />There are tons of JS Libraries, since JavaScript is one of hottest&nbsp;languages and a lot of developers work on it to develop rich client side as well as server side (NodeJS based) . So if your looking forward to use a MVC framework <a href="http://addyosmani.github.com/todomvc/" target="_blank">TodoMVC</a>&nbsp;is a great place to start with. Next for more&nbsp;specialized&nbsp;ones, you can check <a href="http://jster.net/">http://jster.net</a> or&nbsp;<a href="http://devrates.com/project/list?query=%5Bjavascript%5D" target="_blank">devrates.com</a>.<br />Here are some good&nbsp;frameworks one should be familiar with such as AngularJS,&nbsp;BackBone JS, Mocha,&nbsp;Prototype JS.<br /><br />Well, the key is get familiar with JavaScript, and learn/use these libraries that interests you most. Also going through the source code of these libraries is a very enlightening experience.<br /><br />With that said, May the force be with you!<br /><br /><br /><br /></div>
 </div>]]></content>
   </entry>
   
