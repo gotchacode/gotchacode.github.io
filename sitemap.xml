@@ -299,12 +299,18 @@
         <lastmod>2014-02-14T21:41:42+05:30</lastmod>
     </url>
     <url>
+        <loc>
+            http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/
+        </loc>
+        <lastmod>2014-02-15T08:11:39+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://gotchacode.com/blog/archives/</loc>
-        <lastmod>2014-02-14T21:41:42+05:30</lastmod>
+        <lastmod>2014-02-15T08:11:39+05:30</lastmod>
     </url>
     <url>
         <loc>http://gotchacode.com/</loc>
-        <lastmod>2014-02-14T21:41:42+05:30</lastmod>
+        <lastmod>2014-02-15T08:11:39+05:30</lastmod>
     </url>
     <url>
         <loc>http://gotchacode.com/robots.txt</loc>

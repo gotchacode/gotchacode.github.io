@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.com/atom.xml" rel="self"/>
   <link href="http://gotchacode.com/"/>
-  <updated>2014-02-15T07:42:21+05:30</updated>
+  <updated>2014-02-15T08:12:31+05:30</updated>
   <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup a Local Gitignore Without Messing Up Project]]></title>
+    <link href="http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/"/>
+    <updated>2014-02-15T07:51:16+05:30</updated>
+    <id>http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project</id>
+    <content type="html"><![CDATA[<p>A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the list of all file and directories you want git to ignore so that it would nevet get committed. But if you work in multi person team. You might not have liberty to change the projects gitignore. What to do then?</p>
+
+<p>Well, the solution is pretty simple. Say you are using any IDE like Pycharm or Netbeans. They always create some files to create track of your projects. Something like <code>.ropeproject</code></p>
+
+<p>So in order to make git ignore it, Go to : <code>cd .git/info/</code></p>
+
+<p>You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:</p>
+
+<div><script src='https://gist.github.com/7597812.js'></script>
+<noscript><pre><code># git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with &#39;#&#39; are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+.ropeproject/*</code></pre></noscript></div>
+
+
+<p>And it is done. Now you never have to worry about your editor messing up your commits.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Use Facebook Page Albums as Image Source in Django]]></title>
@@ -526,16 +553,6 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
     <id>http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s1600/sub.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="179" src="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s320/sub.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><br />If you are developer of any kind you must have faced some issue and to resolve those you must have browsed Stackoverflow or related site. Here is how you can subscribe to particular tags or topics. See the screenshot below.<br /><br />Say if you want to subscribe to all new questions related to Python , just fill in your tag, enter your email and mail frequency and you are good to go. Also you will need to confirm this subscription in your mail. Hope this helps you folks.<br /><div><br /></div></div>
-</div>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Setup an Ideal Front End Development Stack in Ubuntu 12.04?]]></title>
-    <link href="http://gotchacode.com/2012/12/how-to-setup-ideal-front-end.html"/>
-    <updated>2012-12-21T17:07:00+05:30</updated>
-    <id>http://gotchacode.com/2012/12/how-to-setup-ideal-front-end</id>
-    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on">Starting with Front-End Development and looking for a robust setup?<br /><br />Install Ubuntu 12.04 and&nbsp;here are some of the tools and tips that could come handy if you are configuring it for the first time. I am not detailing on how to install these tools but rather would suggest on what could be good setup for&nbsp;development..<br /><b><br /></b><b>IDE</b>: This is where you spend most of the time. So choose wisely among Sublime Text2, Vim or Emacs. Vim and Emacs are entirely customizable and comes with loads of plugin that would really improve your&nbsp;efficiency. Sublime text is an awesome code editor and you must try it first as it is highly effective and has a lower learning curve. Also there are loads of good plugins available that makes it a handy tool.<br /><div style="text-align: left;"><br /><b>Servers</b>: Install&nbsp;Apache 2,&nbsp;nginx and Node. This would cover most of the modern web server stack. Though node is technically not a server. But I hope you get my point.</div><div style="text-align: left;">Once Node and npm are installed there are some indispensable packages you must use. <b><i>UglifyJS </i></b>among others is a pretty handy one.&nbsp;Install<b><i> Compass </i></b>and <b><i>CoffeeScript</i></b>, also setup up <b><i>jslint/jshint</i></b> with your IDE. It will ensure a habit of shipping out quality code.<br /><br /><b>Browser<i>: Use the latest and nightly builds of Chromium/&nbsp;Firefox</i></b>, you should work with latest once so not miss any good feature/ improvements.</div><ul style="text-align: left;"><li>Install the <i style="font-weight: bold;">latest production release of Ruby, Python and Java, PHP </i>or whatever is your choice of language.&nbsp;</li><li>Learn<b><i> Version control </i></b>such as <b>git</b> and invest some time to learn it. It would save you tonnes of time later.</li><li>Last but not the least use<a href="http://www.blogger.com/%C2%A0http://yeoman.io/" target="_blank">&nbsp;yeoman</a>&nbsp;. It is really gem of a tool, it , it gives a robust set of tools , libraries and a workflow that most of top developers use. Invest sometime in learning and using it and you will be always glad that you did.&nbsp;</li></ul><br /><div style="text-align: left;"><br /></div><div style="text-align: left;">Installing each one them on Ubuntu 12.04 is easy and obviously it is free and freakishly stable. Configure once and worry about the important aspects of&nbsp;development.</div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div></div>
 </div>]]></content>
   </entry>
   

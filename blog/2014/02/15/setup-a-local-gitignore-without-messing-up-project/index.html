@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Linux - Gotchacode</title>
+  <title>Setup a Local Gitignore Without Messing Up Project - Gotchacode</title>
   <meta name="author" content="Vinit Kumar">
 
   
-  <meta name="description" content="Category: Linux">
+  <meta name="description" content="A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the list of all file and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://gotchacode.comblog/categories/linux">
+  <link rel="canonical" href="http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Gotchacode" type="application/atom+xml">
@@ -76,81 +76,108 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Linux</h1>
+    
+      <h1 class="entry-title">Setup a Local Gitignore Without Messing Up Project</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-15T07:51:16+05:30" pubdate data-updated="true">Feb 15<span>th</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://gotchacode.com">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the list of all file and directories you want git to ignore so that it would nevet get committed. But if you work in multi person team. You might not have liberty to change the projects gitignore. What to do then?</p>
 
-  
-  <h2>2013</h2>
+<p>Well, the solution is pretty simple. Say you are using any IDE like Pycharm or Netbeans. They always create some files to create track of your projects. Something like <code>.ropeproject</code></p>
 
-<article>
-  
-<h1><a href="/2013/02/configure-sublime-text2-for-javascript.html">Configure Sublime Text2 for JavaScript Development.</a></h1>
-<time datetime="2013-02-24T11:19:00+05:30" pubdate><span class='month'>Feb</span> <span class='day'>24</span> <span class='year'>2013</span></time>
+<p>So in order to make git ignore it, Go to : <code>cd .git/info/</code></p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/mac/'>mac</a>, <a class='category' href='/blog/categories/sublime-text/'>sublime text</a>, <a class='category' href='/blog/categories/tips/'>tips</a>, <a class='category' href='/blog/categories/windows/'>windows</a></span>
-</footer>
+<p>You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:</p>
 
-
-</article>
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/2012/09/how-to-build-ultra-cheap-computer-to.html">How to Build an Ultra Cheap Computer to Start Programming</a></h1>
-<time datetime="2012-09-03T12:06:00+05:30" pubdate><span class='month'>Sep</span> <span class='day'>03</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/computer/'>Computer</a>, <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/low-price/'>Low Price</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/raspberry/'>raspberry</a></span>
-</footer>
+<div><script src='https://gist.github.com/7597812.js'></script>
+<noscript><pre><code># git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with &#39;#&#39; are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+.ropeproject/*</code></pre></noscript></div>
 
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/2012/09/what-gnulinux-could-learn-from-apple.html">What GNU/Linux Could Learn From Apple</a></h1>
-<time datetime="2012-09-02T08:01:00+05:30" pubdate><span class='month'>Sep</span> <span class='day'>02</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/desktop/'>Desktop.</a>, <a class='category' href='/blog/categories/developers/'>Developers</a>, <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/os-x/'>OS X</a>, <a class='category' href='/blog/categories/apple/'>apple</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/2012/09/stay-focused-and-keep-shipping.html">Stay Focused and Keep Shipping.</a></h1>
-<time datetime="2012-09-01T16:12:00+05:30" pubdate><span class='month'>Sep</span> <span class='day'>01</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/development/'>Development</a>, <a class='category' href='/blog/categories/hacking/'>Hacking</a>, <a class='category' href='/blog/categories/linux/'>Linux</a></span>
-</footer>
-
-
-</article>
-
+<p>And it is done. Now you never have to worry about your editor messing up your commits.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Vinit Kumar</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-15T07:51:16+05:30" pubdate data-updated="true">Feb 15<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/" data-via="vinitkme" data-counturl="http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/" title="Previous Post: How To Use Facebook Page Albums As Image Source in Django">&laquo; How To Use Facebook Page Albums As Image Source in Django</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -234,7 +261,10 @@
       var disqus_shortname = 'gotchacode';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/';
+        var disqus_url = 'http://gotchacode.com/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
