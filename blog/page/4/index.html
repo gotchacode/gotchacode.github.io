@@ -9,7 +9,7 @@
   <meta name="author" content="Vinit Kumar">
 
   
-  <meta name="description" content="Github is easily the world&#8217;s largest repository for projects with almost all major companies as well as Startups &nbsp;use them to deploy &hellip;">
+  <meta name="description" content="A lot of recent posts on Hacker News suggest that Linux is dead on Desktop and OS X killed it. Well I don&#8217;t think that it is still dead or it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,48 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/09/what-gnulinux-could-learn-from-apple.html">What GNU/Linux Could Learn From Apple</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+<time datetime="2012-09-02T08:01:00+05:30" pubdate data-updated="true">Sep 2<span>nd</span>, 2012</time>
+        
+           | <a href="/2012/09/what-gnulinux-could-learn-from-apple.html#disqus_thread"
+             data-disqus-identifier="http://gotchacode.com/2012/09/what-gnulinux-could-learn-from-apple.html">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="css-full-post-content js-full-post-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">A lot of recent posts on Hacker News suggest that Linux is dead on Desktop and OS X killed it. Well I don&#8217;t think that it is still dead or it will be ever.<br />Instead of Lamenting on it, we should learn from our mistakes and also from success of OS X. Here are some of things we could do:<br /><br /><b>User Interface</b>: This is one place where OS X beats Linux by huge margin, Apple hire the best graphic designers and they put a lot of effort on how it looks and how&nbsp;intuitive is feels. Linux really need to improve on the UI specially we need excellent graphic designers that can create the next gen graphics. We could also take a lesson from Androids, they look awesome and they have a Linux at the core. The problem of fragmentation can be get rid with a unified great looking Desktop Environment that is functional as well as beautiful. We could always have the choice of other DE, but there should be one that could cater of masses of people who just want there OS to work and don&#8217;t have the technical aptitude to tweak it.<br /><br /><b>Softwares</b>: This is one place where we have a lead. The only problem is that we don&#8217;t have as much third party developers developing for Linux. One way to fix that is that we could have a central Software center that could provides softwares for almost all the Linux Distributions. Package management system could be merged into one or we could have a same package management in addition to the other package manager specific to that distro.<br /><br /><br /><b>Stability</b>: This is one thing that really needs to be addressed very seriously. No user wants his OS to crash performing an update or release upgrade. These issues should be addressed from the smallest level and only stable kernels should be included. Also advanced filesystem such as ZFS or BRFTS should be included as soon as possible such that we do fast backups and full system rollback.<br /><br /><b>Focus on Developers</b>: OS X earned a huge advantage because it focused on developers and provided everything they need on a very stable environment. We need to beat them in that. We have all the tools , we just need to make it more organized and less painful. Any new release should make it their first priority to see that setting a &nbsp;development environment is as easy as clicking a button on software center or by a unified command that fetches all dependencies. They could be grouped as say Rails Development, Python Development, PHP Development. Surely we can trim these unified packages if we need. But a developer not used to Linux would like to start with his development as soon as possible without learning to mess with the Operating system.&#8221;<b><i>Just Works</i></b>&#8221; is a important factor that we need to focus on<i>.<b>It is very crucial because these are the developer who will build third party apps and availability of these apps could only attract masses to adopt Linux.</b></i><br /><i><b><br /></b></i>We need to play on our strengths rather than trying to imitate Apple. They have their limits, We have freedom to choose, We can offer our OS for free, They can&#8217;t. We can give away open source softwares for free, They cant do that.With the other Hardware manufactures catching up soon, Apple won&#8217;t have a next gen leap with their hardware. Android devices have already proved it is possible.<br /><i><b><br /></b></i><i style="font-weight: bold;">Imagine an OS with a UI better than Macs, and free softwares in vast Apt Repositories(just an example..don&#8217;t kill me for it). Stability and full drivers support. This could be </i><b>Linux </b><b><i>that could really be the </i>Desktop of the Year.&nbsp;</b><br /><b><br /></b><b>P.S Everyone who hates these ideas are welcome to suggest better ones, i am just suggesting ideas and I am sure there are better ones.&nbsp;</b><br /><b><br /></b><b><br /></b><br /><br /></div>
+</div></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -474,82 +516,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2011/12/need-human-readable-disk-usage-statsadd.html">Need Human Readable Disk Usage Stats,Add This Script</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-<time datetime="2011-12-11T21:07:00+05:30" pubdate data-updated="true">Dec 11<span>th</span>, 2011</time>
-        
-           | <a href="/2011/12/need-human-readable-disk-usage-statsadd.html#disqus_thread"
-             data-disqus-identifier="http://gotchacode.com/2011/12/need-human-readable-disk-usage-statsadd.html">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class="css-full-post-content js-full-post-content">
-If you want a more human readable Disk Usage stats while using linux, add the following script to your .bashrc<br/><pre>alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s&lt;1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'</pre><br/>You should add it under User specified Functions and aliases. When you are done with it this is what you will see when you type duf in your terminal.<br/><br/><a href="http://gotchacode.files.wordpress.com/2011/12/pic4.png"><img class="alignleft size-full wp-image-579" title="pic4" src="http://gotchacode.files.wordpress.com/2011/12/pic4.png" alt="" width="580" height="326" /></a>
-</div>
-<div class="css-full-comments-content js-full-comments-content">
-<div class="css-full-comment js-full-comment">
-  <div class="css-comment-user-link js-comment-user-link">
-  <a href="http://administratosphere.wordpress.com/">
-  <div class="css-comment-name js-comment-name">
-    ddouthitt
-  </div>
-  </a>
-  <div class="css-comment-date js-comment-date">
-    2012-02-14T04:20:00.000Z
-  </div>
-  </div>
-  <div class="css-comment-content js-comment-content">
-    This is nice, but how about using the -h option to du?<br><br>$ du -sh *<br>17M     bugzilla-3.4.6<br>36K     hsperfdata_root<br>52M     new<br>42M     old<br>0       sfcbLocalSocket<br>4.0K    ssh-ffOOT30605<br>
-  </div>
-  <br/>
-</div>
-<div class="css-full-comment js-full-comment">
-  <div class="css-comment-user-link js-comment-user-link">
-  <a href="http://administratosphere.wordpress.com/">
-  <div class="css-comment-name js-comment-name">
-    ddouthitt
-  </div>
-  </a>
-  <div class="css-comment-date js-comment-date">
-    2012-02-14T04:26:56.000Z
-  </div>
-  </div>
-  <div class="css-comment-content js-comment-content">
-    Could you remove the line in my message labelled &quot;mapping&quot; (thanks!).
-  </div>
-  <br/>
-</div>
-</div></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -567,6 +533,10 @@ If you want a more human readable Disk Usage stats while using linux, add the fo
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/26/simple-state-machine-framework-in-c-number/">Simple State Machine Framework in Csharp</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/15/setup-a-local-gitignore-without-messing-up-project/">Setup a Local Gitignore Without Messing Up Project</a>
       </li>
     
@@ -580,10 +550,6 @@ If you want a more human readable Disk Usage stats while using linux, add the fo
     
       <li class="post">
         <a href="/2014/01/music-movies-and-life.html">Music, Movies and Life</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2014/01/happy-new-year-2014.html">Happy New Year 2014</a>
       </li>
     
   </ul>

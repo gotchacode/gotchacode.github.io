@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.com/atom.xml" rel="self"/>
   <link href="http://gotchacode.com/"/>
-  <updated>2014-02-15T08:58:45+05:30</updated>
+  <updated>2014-02-26T11:59:13+05:30</updated>
   <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -12,6 +12,242 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Simple State Machine Framework in Csharp]]></title>
+    <link href="http://gotchacode.com/blog/2014/02/26/simple-state-machine-framework-in-c-number/"/>
+    <updated>2014-02-26T11:37:18+05:30</updated>
+    <id>http://gotchacode.com/blog/2014/02/26/simple-state-machine-framework-in-c-number</id>
+    <content type="html"><![CDATA[<p>This blog post covers a very simple, light weight, yet flexible state machine framework in csharp.</p>
+
+<p><a href="https://www.nuget.org/packages/SSM/">Download NuGet package</a>__</p>
+
+<p>Please see SSM.Tests folder for an example as well as test cases_</p>
+
+<h2>Concept</h2>
+
+<p><strong>State :</strong> The state of a stateful entity. Represented by <code>IState</code></p>
+
+<p><strong>Stateful entity :</strong> An entity that has a defined state. Represented by <code>IStatefulEntity</code></p>
+
+<p><strong>Context :</strong> A context in which a state machine executes a transition. It is simply a set of configuration and data that governs the execution of a state machine. Represented by <code>IStateMachineContext</code></p>
+
+<p><strong>Transition handler :</strong> A component that handles a transition of a stateful entity between a source state to target state. Represented by <code>ITransitionHandler</code></p>
+
+<h2>Usage</h2>
+
+<p>Start by creating an entity that represents a state.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'>    <span class="k">public</span> <span class="k">class</span> <span class="nc">ServiceTicketState</span> <span class="p">:</span> <span class="n">IState</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">public</span> <span class="kt">string</span> <span class="n">Code</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>        <span class="c1">// ...</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, create a stateful entity by implementing <code>IStatefulEntity</code> interface. For exmaple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">ServiceTicket</span> <span class="p">:</span> <span class="n">IStatefulEntity</span><span class="p">&lt;</span><span class="n">ServiceTicketState</span><span class="p">&gt;</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="n">ServiceTicketState</span> <span class="n">State</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next comes transition handlers. A transition hadler is created by implementing <code>ITransitionHandler</code> interface. Below is an example of a generic transition handler that can be used to abstract common functionalities in our Service Ticket example.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'>    <span class="k">public</span> <span class="k">class</span> <span class="nc">GenericTransitionHandler</span> <span class="p">:</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">TransitionKey</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">public</span> <span class="k">virtual</span> <span class="n">ServiceTicket</span> <span class="nf">Execute</span><span class="p">(</span><span class="n">ServiceTicket</span> <span class="n">entity</span><span class="p">,</span> <span class="n">ServiceTicketState</span> <span class="n">nextState</span><span class="p">,</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">argumentsMap</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="n">entity</span><span class="p">.</span><span class="n">State</span> <span class="p">=</span> <span class="n">nextState</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">entity</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">public</span> <span class="k">virtual</span> <span class="n">ServiceTicket</span> <span class="nf">ValidateTransition</span><span class="p">(</span><span class="n">ServiceTicket</span> <span class="n">entity</span><span class="p">,</span> <span class="n">ServiceTicketState</span> <span class="n">nextState</span><span class="p">,</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">argumentsMap</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">entity</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">BeforeTransition</span><span class="p">(</span><span class="n">ServiceTicket</span> <span class="n">entity</span><span class="p">,</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">argumentsMap</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">AfterTransition</span><span class="p">(</span><span class="n">ServiceTicket</span> <span class="n">entity</span><span class="p">,</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">argumentsMap</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next and final step is to create a &lsquo;context&rsquo; by implementing <code>IStateMachineContext</code> interface. This interface declares following methods that need to be implemented to create a context.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">ICollection</span><span class="p">&lt;</span><span class="n">StateTransition</span><span class="p">&gt;</span> <span class="n">GetTransitions</span><span class="p">();</span>
+</span><span class='line'><span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="p">&gt;&gt;</span> <span class="n">GetTransitionHandlersMap</span><span class="p">();</span>
+</span><span class='line'><span class="n">ICollection</span><span class="p">&lt;</span><span class="n">M</span><span class="p">&gt;</span> <span class="n">AllStates</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Implementation approach is left to the user. It could from just hard coding for simple cases to database backed storage and retrieval for more advanced cases.</p>
+
+<p>Here is an example implementation (hard coded for simplicity)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'>    <span class="k">public</span> <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">StateTransition</span><span class="p">&gt;</span> <span class="n">GetTransitions</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">StateTransition</span><span class="p">&gt;</span> <span class="n">map</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">StateTransition</span><span class="p">&gt;();</span>
+</span><span class='line'>        <span class="c1">// Define all possible transitions, and its source and target states</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">StateTransition</span><span class="p">(</span><span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;Transition_New&quot;</span><span class="p">,</span> <span class="s">&quot;New&quot;</span><span class="p">));</span> <span class="c1">// ? means null or undefined state</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">StateTransition</span><span class="p">(</span><span class="s">&quot;New&quot;</span><span class="p">,</span> <span class="s">&quot;Transition_Open&quot;</span><span class="p">,</span> <span class="s">&quot;Open&quot;</span><span class="p">));</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">StateTransition</span><span class="p">(</span><span class="s">&quot;Open&quot;</span><span class="p">,</span> <span class="s">&quot;Transition_Close&quot;</span><span class="p">,</span> <span class="s">&quot;Closed&quot;</span><span class="p">));</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">StateTransition</span><span class="p">(</span><span class="s">&quot;Closed&quot;</span><span class="p">,</span> <span class="s">&quot;Transition_ReOpen&quot;</span><span class="p">,</span> <span class="s">&quot;Open&quot;</span><span class="p">));</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">StateTransition</span><span class="p">(</span><span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;Transition_Cancel&quot;</span><span class="p">,</span> <span class="s">&quot;Cancelled&quot;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">map</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;&gt;</span> <span class="n">GetTransitionHandlersMap</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;&gt;</span> <span class="n">map</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;&gt;();</span>
+</span><span class='line'>        <span class="c1">// create a map of all available transitions and their respective transition handlers</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Transition_New&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">NewTransitionHandler</span><span class="p">());</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Transition_Open&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">OpenTransitionHandler</span><span class="p">());</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Transition_Close&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">CloseTransitionHandler</span><span class="p">());</span>
+</span><span class='line'>        <span class="n">map</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Transition_ReOpen&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">OpenTransitionHandler</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">map</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">ServiceTicketState</span><span class="p">&gt;</span> <span class="n">AllStates</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">List</span><span class="p">&lt;</span><span class="n">ServiceTicketState</span><span class="p">&gt;</span> <span class="n">states</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ServiceTicketState</span><span class="p">&gt;();</span>
+</span><span class='line'>        <span class="c1">// create a list of all possible states</span>
+</span><span class='line'>        <span class="n">states</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">ServiceTicketState</span><span class="p">()</span> <span class="p">{</span> <span class="n">Code</span> <span class="p">=</span> <span class="s">&quot;New&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New Ticket&quot;</span> <span class="p">});</span>
+</span><span class='line'>        <span class="n">states</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">ServiceTicketState</span><span class="p">()</span> <span class="p">{</span> <span class="n">Code</span> <span class="p">=</span> <span class="s">&quot;Open&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Ticket Open&quot;</span> <span class="p">});</span>
+</span><span class='line'>        <span class="n">states</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">ServiceTicketState</span><span class="p">()</span> <span class="p">{</span> <span class="n">Code</span> <span class="p">=</span> <span class="s">&quot;Closed&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Ticket Closed&quot;</span> <span class="p">});</span>
+</span><span class='line'>        <span class="n">states</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">ServiceTicketState</span><span class="p">()</span> <span class="p">{</span> <span class="n">Code</span> <span class="p">=</span> <span class="s">&quot;Cancelled&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Ticket Cancelled&quot;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">states</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now <code>ServiceTicket</code> entity can be transitioned through state machine. Create an instance of <code>StateMachine</code> as follows.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'>        <span class="n">IStateMachineContext</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleStateMachineContext</span><span class="p">();</span>
+</span><span class='line'>        <span class="n">StateMachine</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;</span> <span class="n">StateMachine</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StateMachine</span><span class="p">&lt;</span><span class="n">ServiceTicket</span><span class="p">,</span> <span class="n">ServiceTicketState</span><span class="p">&gt;(</span><span class="n">context</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And request a transition as shown below.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'>        <span class="n">ServiceTicket</span> <span class="n">serviceTicket</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ServiceTicket</span><span class="p">()</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>             <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;An example service ticket&quot;</span>
+</span><span class='line'>        <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StateMachine</span><span class="p">.</span><span class="n">RequestTransition</span><span class="p">(</span><span class="n">serviceTicket</span><span class="p">,</span> <span class="s">&quot;Transition_New&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you wish to contribute to the project, it is open sourced here: <a href="https://github.com/mubeenh/SSM">SSM</a></p>
+
+<p>Feel free to contact the author of the package in case of any queries about the framework here: <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#109;&#x75;&#98;&#x65;&#101;&#x6e;&#x2e;&#x68;&#x61;&#105;&#100;&#x61;&#114;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#109;&#x75;&#x62;&#101;&#x65;&#x6e;&#46;&#104;&#97;&#105;&#x64;&#x61;&#114;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup a Local Gitignore Without Messing Up Project]]></title>
@@ -543,16 +779,6 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
     <id>http://gotchacode.com/2013/01/happy-new-year-readers</id>
     <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">Best wishes for the New Year fellas, Last year this blog clocked more than 20k hits from all over the world.<br />Here are some stats:<br /><br />Top 3 most hits :<br />Country Wise:<br /><br /><ol style="text-align: left;"><li>USA</li><li>India</li><li>UK</li></ol><div>Operating System wise:&nbsp;</div><div><ol style="text-align: left;"><li>Window</li><li>OS X</li><li>Linux</li></ol><div>Browsers wise:</div></div><div><ol style="text-align: left;"><li>Chrome</li><li>Firefox</li><li>Safari</li></ol><div>With that said, recently most the posts are related to software development and programming, so this time i will try to improve the quality of posts and will be showcasing an Open Source project each week.&nbsp;</div></div><div><br /></div><div>Keep reading!</div></div>
-</div>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Subscribe Any Tag on Stackoverflow?]]></title>
-    <link href="http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on.html"/>
-    <updated>2012-12-25T13:57:00+05:30</updated>
-    <id>http://gotchacode.com/2012/12/how-to-subscribe-any-tag-on</id>
-    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s1600/sub.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="179" src="http://2.bp.blogspot.com/-9_YsEq06OPE/UNmwpcos-6I/AAAAAAAAA6c/U74bPaM33vY/s320/sub.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><br />If you are developer of any kind you must have faced some issue and to resolve those you must have browsed Stackoverflow or related site. Here is how you can subscribe to particular tags or topics. See the screenshot below.<br /><br />Say if you want to subscribe to all new questions related to Python , just fill in your tag, enter your email and mail frequency and you are good to go. Also you will need to confirm this subscription in your mail. Hope this helps you folks.<br /><div><br /></div></div>
 </div>]]></content>
   </entry>
   
