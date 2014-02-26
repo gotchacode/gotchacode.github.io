@@ -6,11 +6,12 @@ comments: true
 categories: 
 ---
 
-This blog post covers a very simple, light weight, yet flexible state machine framework in csharp.
+This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.
 
-[Download NuGet package](https://www.nuget.org/packages/SSM/)__
+[Souce code on Github] (https://github.com/mubeenh/SSM)
 
-Please see SSM.Tests folder for an example as well as test cases_
+[Download NuGet package](https://www.nuget.org/packages/SSM/)
+
 
 Concept
 --------
@@ -151,8 +152,4 @@ And request a transition as shown below.
             StateMachine.RequestTransition(serviceTicket, "Transition_New");
 ```
 
-If you wish to contribute to the project, it is open sourced here: [SSM](https://github.com/mubeenh/SSM)
-
-Feel free to contact the author of the package in case of any queries about the framework here: mubeen.haidar@gmail.com
-
-
+And thats it. Your state machine is ready to handle transitions on the Service Ticket example entity.
