@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.com/atom.xml" rel="self"/>
   <link href="http://gotchacode.com/"/>
-  <updated>2014-02-26T12:55:23+05:30</updated>
+  <updated>2014-02-26T13:15:55+05:30</updated>
   <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Simple State Machine Framework in Csharp]]></title>
+    <title type="html"><![CDATA[Simple State Machine Framework in C#]]></title>
     <link href="http://gotchacode.com/blog/2014/02/26/simple-state-machine-framework-in-c-number/"/>
     <updated>2014-02-26T11:37:18+05:30</updated>
     <id>http://gotchacode.com/blog/2014/02/26/simple-state-machine-framework-in-c-number</id>
     <content type="html"><![CDATA[<p>This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.</p>
 
-<p>[Souce code on Github] (<a href="https://github.com/mubeenh/SSM">https://github.com/mubeenh/SSM</a>)</p>
+<p><a href="https://github.com/mubeenh/SSM">Souce code on Github</a></p>
 
 <p><a href="https://www.nuget.org/packages/SSM/">Download NuGet package</a></p>
 
