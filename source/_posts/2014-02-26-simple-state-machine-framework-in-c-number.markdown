@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simple State Machine Framework in csharp"
+title: "Simple State Machine Framework in c#"
 date: 2014-02-26 11:37:18 +0530
 comments: true
 categories: 
@@ -8,7 +8,7 @@ categories:
 
 This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.
 
-[Souce code on Github] (https://github.com/mubeenh/SSM)
+[Souce code on Github](https://github.com/mubeenh/SSM)
 
 [Download NuGet package](https://www.nuget.org/packages/SSM/)
 
