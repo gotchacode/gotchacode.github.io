@@ -4,7 +4,7 @@
   <title><![CDATA[Gotchacode]]></title>
   <link href="http://gotchacode.com/atom.xml" rel="self"/>
   <link href="http://gotchacode.com/"/>
-  <updated>2014-03-15T23:30:58+05:30</updated>
+  <updated>2014-05-01T14:15:58+05:30</updated>
   <id>http://gotchacode.com/</id>
   <author>
     <name><![CDATA[Vinit Kumar]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Pragmatic Programmer Checklist]]></title>
+    <link href="http://gotchacode.com/blog/2014/05/01/the-pragmatic-programmer-checklist/"/>
+    <updated>2014-05-01T14:05:26+05:30</updated>
+    <id>http://gotchacode.com/blog/2014/05/01/the-pragmatic-programmer-checklist</id>
+    <content type="html"><![CDATA[<p>Last year, I read a great book on Programming and development (The Prgramatic Programmer).
+Here is a gist of checklist you must do in case you are developer. These are very good
+and for sure will help you evolve as a better developer.</p>
+
+<div><script src='https://gist.github.com/55ef44f759b7e5620d59.js'></script>
+<noscript><pre><code># Architectural Questions
+
+- [ ] Are responsibilities well defined?
+- [ ] Are the collaborations well defined?
+- [ ] Is coupling minimized?
+- [ ] Can you identify potential duplication?
+- [ ] Are interface definitions and constraints acceptable?
+- [ ] Can modules access needed data—when needed?</code></pre></noscript></div>
+
+
+<p>You can fork the Gists here (<a href="https://gist.github.com/vinitkumar/55ef44f759b7e5620d59">https://gist.github.com/vinitkumar/55ef44f759b7e5620d59</a>)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Simple State Machine Framework in C#]]></title>
@@ -767,16 +791,6 @@ your blog posts on markdown. Which also has a sweet syntax highlighting.</p>
   </div>
   <br/>
 </div>
-</div>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Happy New Year Readers!]]></title>
-    <link href="http://gotchacode.com/2013/01/happy-new-year-readers.html"/>
-    <updated>2013-01-15T14:01:00+05:30</updated>
-    <id>http://gotchacode.com/2013/01/happy-new-year-readers</id>
-    <content type="html"><![CDATA[<div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on">Best wishes for the New Year fellas, Last year this blog clocked more than 20k hits from all over the world.<br />Here are some stats:<br /><br />Top 3 most hits :<br />Country Wise:<br /><br /><ol style="text-align: left;"><li>USA</li><li>India</li><li>UK</li></ol><div>Operating System wise:&nbsp;</div><div><ol style="text-align: left;"><li>Window</li><li>OS X</li><li>Linux</li></ol><div>Browsers wise:</div></div><div><ol style="text-align: left;"><li>Chrome</li><li>Firefox</li><li>Safari</li></ol><div>With that said, recently most the posts are related to software development and programming, so this time i will try to improve the quality of posts and will be showcasing an Open Source project each week.&nbsp;</div></div><div><br /></div><div>Keep reading!</div></div>
 </div>]]></content>
   </entry>
   
