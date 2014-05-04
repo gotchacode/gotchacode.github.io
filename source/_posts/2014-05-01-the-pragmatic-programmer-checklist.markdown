@@ -7,9 +7,9 @@ categories:
 ---
 
 Last year, I read a great book on Programming and development (The Prgramatic Programmer).
-Here is a gist of checklist you must do in case you are developer. These are very good
-and for sure will help you evolve as a better developer.
+Here is a gist of checklist you must follow in case you are developer. These are very good
+and for sure will help you change as a better developer.
 
 {% gist 55ef44f759b7e5620d59 %}
 
-You can fork the Gists here (https://gist.github.com/vinitkumar/55ef44f759b7e5620d59)
+You can fork the gist here (https://gist.github.com/vinitkumar/55ef44f759b7e5620d59)
