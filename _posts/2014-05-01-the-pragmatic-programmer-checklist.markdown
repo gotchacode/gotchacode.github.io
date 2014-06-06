@@ -12,5 +12,3 @@ and for sure will help you evolve as a better developer.
 
 
 <script src="https://gist.github.com/vinitkumar/44d231826188b3006726.js"></script>
-
-You can fork the Gists here (https://gist.github.com/vinitkumar/55ef44f759b7e5620d59)
