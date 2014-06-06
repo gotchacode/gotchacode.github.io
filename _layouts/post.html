@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+{{ content }}
+</div>
+
+<div class="keep-in-touch">
+  <p>
+    Tweet me <a href="https://twitter.com/vinitkme">@vinitkme</a> if you like this post.
+</div>
+
+{% include disqus_comments.html %}

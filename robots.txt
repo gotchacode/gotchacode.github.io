@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://gotchacode.com/sitemap.xml 

@@ -1,0 +1,31 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+paginate: 8
+description:     A guide to your Digitial Life.
+logo:             logo.png
+disqus_shortname: gotchacode
+url: http://gotchacode.com
+#Comment out url when working locally to resolve base urls correctly
+#url:
+
+# Owner/author information
+owner:
+  name:           Vinit Kumar
+  avatar:         https://avatars3.githubusercontent.com/u/537678?s=460
+  email:          vinit.kumar@changer.nl
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        vinitkme
+  github:         vinitkumar
+  stackexchange:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:     +Vinitkumarme
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:  UA-48109717-1
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
