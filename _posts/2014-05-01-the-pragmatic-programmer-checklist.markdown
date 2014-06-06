@@ -11,4 +11,4 @@ Here is a gist of checklist you must do in case you are developer. These are ver
 and for sure will help you evolve as a better developer.
 
 
-<script src="https://gist.github.com/vinitkumar/44d231826188b3006726.js"></script>
+<script src="https://gist.github.com/vinitkumar/55ef44f759b7e5620d59.js"></script>
