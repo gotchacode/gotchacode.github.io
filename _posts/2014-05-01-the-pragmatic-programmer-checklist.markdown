@@ -10,6 +10,7 @@ Last year, I read a great book on Programming and development (The Prgramatic Pr
 Here is a gist of checklist you must do in case you are developer. These are very good
 and for sure will help you evolve as a better developer.
 
-<script src="https://gist.github.com/vinitkumar/55ef44f759b7e5620d59.js"></script>
+
+{% gist vinitkumar/55ef44f759b7e5620d59 %}
 
 You can fork the Gists here (https://gist.github.com/vinitkumar/55ef44f759b7e5620d59)
