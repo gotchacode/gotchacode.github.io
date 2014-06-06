@@ -11,6 +11,6 @@ Here is a gist of checklist you must do in case you are developer. These are ver
 and for sure will help you evolve as a better developer.
 
 
-{% gist vinitkumar/55ef44f759b7e5620d59 %}
+<script src="https://gist.github.com/vinitkumar/55ef44f759b7e5620d59.js"></script>
 
 You can fork the Gists here (https://gist.github.com/vinitkumar/55ef44f759b7e5620d59)
