@@ -5,7 +5,7 @@ paginate: 8
 description:     A guide to your Digitial Life.
 logo:             logo.png
 disqus_shortname: gotchacode
-url: http://gotchacode.com
+# url: http://gotchacode.com
 #Comment out url when working locally to resolve base urls correctly
 #url:
 
