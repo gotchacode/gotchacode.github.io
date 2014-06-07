@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: default
 title: About Vinit Kumar
 ---
-
 <img src="https://avatars3.githubusercontent.com/u/537678?s=460" class="profile-pic">
 
 An experienced web developer with good exposure in JavaScript and Python based development. I invest a lot of thinking and effort in the products which results in good user experience and user interaction.
