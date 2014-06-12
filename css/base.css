@@ -175,7 +175,7 @@ ul.nav li.logo a {
   font-weight: lighter;
 }
 .listing .post.other h2 a {
-  color: #000;
+  color: #55acee;
 }
 .listing .post.other p:last-child {
   margin-bottom: 0;
@@ -493,7 +493,6 @@ code.html span.doctype {
 .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
 .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gr { color: #aa0000 } /* Generic.Error */
@@ -508,6 +507,7 @@ code.html span.doctype {
 .highlight .kc { font-weight: bold } /* Keyword.Constant */
 .highlight .kd { font-weight: bold } /* Keyword.Declaration */
 .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
 .highlight .kr { font-weight: bold } /* Keyword.Reserved */
 .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
 .highlight .m { color: #009999 } /* Literal.Number */
