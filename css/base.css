@@ -38,6 +38,7 @@ body {
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
   border-top: 4px solid #556270;
+  border-bottom: 4px solid #556270;
 }
 
 strong {
@@ -82,6 +83,7 @@ header {
 }
 
 ul.nav {
+  background-color: #eee;
   margin: 0;
   padding: 12px 0 10px 0;
   list-style-type: none;
