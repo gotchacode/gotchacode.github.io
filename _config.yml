@@ -1,31 +1,36 @@
 name: Gotchacode
-markdown: redcarpet
-pygments: true
-paginate: 8
-description:     A guide to your Digitial Life.
-logo:             logo.png
-disqus_shortname: gotchacode
-# url: http://gotchacode.com
-#Comment out url when working locally to resolve base urls correctly
-#url:
+description: >
+    A guide to your Digitial Life.
+about: >
+    Vinit is a Senior Backend & Systems Engineer at Socialschools B.V. His expertise lies in writing scalable backend systems in Python, Golang & Node.js. He has also written React/Backbone/Angular in many projects and has a decent understanding of mobile development.
+    He enjoys solving difficult problems, debugging and coming up with simple solutions.
+    At Socialschools, he has worked on APIs, performance, scaling and security of the complete application. With over 5 years of experience in Python/Django he is able to rapidly build features and debug/fix nasty bugs.
 
-# Owner/author information
+url: http://gotchacode.com
+# baseurl: "/white-paper" 
+markdown: kramdown
+highlighter: rouge
+
+gems: [jekyll-paginate,  jekyll-gist]
+
+paginate: 3
+
+logo:             logo.png
+disqus_shortname:
+
 owner:
   name:           Vinit Kumar
-  avatar:         https://avatars3.githubusercontent.com/u/537678?s=460
-  email:          vinit.kumar@changer.nl
+  avatar:         
+  email:          vinit1414.08@bitmesra.ac.in
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        vinitkme
-  github:         vinitkumar
+  twitter:       vinitkme
+  github:        vinitkumar
   stackexchange:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:     +Vinitkumarme
+  google_plus:  +Vinitkumarme
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:  UA-48109717-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
