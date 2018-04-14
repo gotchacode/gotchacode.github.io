@@ -7,12 +7,11 @@ about: >
     At Socialschools, he has worked on APIs, performance, scaling and security of the complete application. With over 5 years of experience in Python/Django he is able to rapidly build features and debug/fix nasty bugs.
 
 url: http://gotchacode.com
-# baseurl: "/white-paper" 
+# baseurl: "/white-paper"
 markdown: kramdown
 highlighter: rouge
 
-gems: [jekyll-paginate,  jekyll-gist]
-
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 paginate: 3
 
 logo:             logo.png
@@ -20,7 +19,7 @@ disqus_shortname:
 
 owner:
   name:           Vinit Kumar
-  avatar:         
+  avatar:
   email:          vinit_kumar@hotmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:       gotchacode
