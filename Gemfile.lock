@@ -19,6 +19,8 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-feed (0.9.3)
+      jekyll (~> 3.3)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
     jekyll-paginate (1.1.0)
@@ -53,9 +55,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-feed
   jekyll-gist
   jekyll-paginate
   rouge
 
 BUNDLED WITH
-   1.14.5
+   1.16.1

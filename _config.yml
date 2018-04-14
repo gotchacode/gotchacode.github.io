@@ -11,7 +11,8 @@ url: http://gotchacode.com
 markdown: kramdown
 highlighter: rouge
 
-plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+gems: ['jekyll-paginate', 'jekyll-gist']
 paginate: 3
 
 logo:             logo.png
