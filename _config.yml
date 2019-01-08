@@ -1,36 +1,36 @@
-name: Gotchacode
+name: GotchaCode
 description: >
-    A guide to your Digital Life.
+    Code blog of Mr. Vinit Kumar
 about: >
-    Vinit is a Senior Backend & Systems Engineer at Socialschools B.V. His expertise lies in writing scalable backend systems in Python, Golang & Node.js. He has also written React/Backbone/Angular in many projects and has a decent understanding of mobile development.
-    He enjoys solving difficult problems, debugging and coming up with simple solutions.
-    At Socialschools, he has worked on APIs, performance, scaling and security of the complete application. With over 5 years of experience in Python/Django he is able to rapidly build features and debug/fix nasty bugs.
-
-url: http://gotchacode.com
-# baseurl: "/white-paper"
+  This is the technical blog of Mr. Vinit Kumar. Some posts are more than 4 years old and mostly an attempt
+  to document the coding journey.
+master_repo: false
+url: "https://gotchacode.com"
 markdown: kramdown
 highlighter: rouge
 
-plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
-gems: ['jekyll-paginate', 'jekyll-gist']
-paginate: 3
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
 
 logo:             logo.png
 disqus_shortname:
 
+rtl: false
 owner:
   name:           Vinit Kumar
-  avatar:
-  email:          vinit_kumar@hotmail.com
+  avatar:         "https://avatars1.githubusercontent.com/u/537678?s=240&v=4"
+  email:          "mail@vinitkumar.me"
   # Social networking links used in footer. Update and remove as you like.
-  twitter:       gotchacode
-  github:        gotchacode
-  stackexchange:
+  twitter: vinitkme
+  github: https://github.com/vinitkumar
+  stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
+  linkedin: https://www.linkedin.com/in/vinitatlinkedin
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:  +Vinitkumarme
+  google_plus:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:  UA-48109717-1
+google_analytics:
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
