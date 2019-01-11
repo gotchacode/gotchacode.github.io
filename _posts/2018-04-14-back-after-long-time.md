@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Back after long"
+title: "Blogging back after long time"
 date: 2018-04-14
 comments: true
 categories:
