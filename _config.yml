@@ -1,9 +1,9 @@
 name: GotchaCode
 description: >
-    Code blog of Mr. Vinit Kumar
+    A blog with essays about technology, programming and ethics.
 about: >
-  This is the technical blog of Mr. Vinit Kumar. Some posts are more than 4 years old and mostly an attempt
-  to document the coding journey.
+  Vinit has been actively blogging since 2010 on various topics such as programming, technology,
+  gadgets and software development. Consider this as a personal programming journal and enjoy the  essays if you like these topics.
 master_repo: false
 url: "https://gotchacode.com"
 markdown: kramdown

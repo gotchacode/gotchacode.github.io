@@ -139,7 +139,7 @@ ul.nav li {
   }
 }
 ul.nav li a {
-  color: black;
+  color: #2382c8;
   margin-left: 10px;
   text-decoration: none;
   font-weight: lighter;
@@ -189,7 +189,7 @@ ul.nav li.logo a {
 }
 
 .listing .post h2 a {
-  color: #000;
+  color: #2382c8;
   text-decoration: none;
   font-size: 40px;
 }
@@ -213,8 +213,9 @@ ul.nav li.logo a {
   font-weight: lighter;
 }
 .listing .post.other h2 a {
-  color: #000;
+  color: #2382c8;
 }
+
 .listing .post.other h2 a:hover {
   color: deepskyblue;
 }
