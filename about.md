@@ -8,7 +8,7 @@ title: About Vinit Kumar
 
 {{site.about}}
 
-Vinit lives in Pune, with his son Advik and wife Rituparna. Rituparna is the founder of a Digital Marketing Company <a href="https://scoophubs.com" target="_blank">ScoopHubs.com</a></p>
+<p> Vinit lives in Pune with his family. His wife Rituparna is the founder of a Digital Marketing Company <a href="https://scoophubs.com" target="_blank">ScoopHubs.com</a></p>
 
 <div class="pagination">
   {% if site.owner.linkedin %}
